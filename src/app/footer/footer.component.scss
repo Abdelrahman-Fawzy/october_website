@@ -1,0 +1,125 @@
+@import "../../abstracts/variables", "../../abstracts/mixins";
+
+footer {
+  background: $footerColor;
+  color: #ccc;
+  margin-top: 10em;
+  position: relative;
+  padding-bottom: 3em;
+  .booking_seat {
+    background: $white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2em;
+    width: 60%;
+    margin: auto;
+    border-radius: $semiBorderRadius;
+    position: relative;
+    top: -70px;
+    box-shadow: 0 6px 50px rgb(0 0 0 / 16%);
+    .messages {
+      text-align: right;
+      h5 {
+        color: $footerColor;
+        font-weight: 600;
+        font-size: $fontSize + 1;
+      }
+      h4 {
+        margin-top: 1em;
+        color: $orange;
+        font-weight: 600;
+        font-size: $fontSize + 9;
+      }
+    }
+  }
+  .logo {
+    width: 140px;
+    height: 140px;
+    margin-bottom: 1em;
+    margin: auto;
+    margin-bottom: 2em;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .social_links {
+    display: flex;
+    gap: 1em;
+    padding: 0;
+    justify-content: center;
+    li {
+      background: $white;
+      font-size: $fontSize + 7;
+      border-radius: 50%;
+      width: 35px;
+      height: 34px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      transition: all 0.3s;
+      cursor: pointer;
+      fa-icon {
+        color: $blackvthree;
+        width: 100%;
+        height: 100%;
+      }
+      &:hover {
+        background: $orange;
+        fa-icon {
+          color: $white;
+        }
+      }
+    }
+  }
+  span.fast-links {
+    font-weight: 600;
+    color: $white;
+    font-size: $fontSize + 4;
+    margin-bottom: 1em;
+    display: block;
+  }
+  .links {
+    display: flex;
+    gap: 2em;
+    ul {
+      padding: 0;
+      li {
+        margin-bottom: 1em;
+        a {
+          color: #ccc;
+          margin-bottom: 1em;
+        }
+      }
+    }
+  }
+  .actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1em;
+    button {
+      padding: 10px 2em;
+    }
+  }
+  ul.contacts {
+    li {
+      margin-bottom: 1em;
+      a {
+        color: $white;
+        span {
+          margin: 0 1em;
+          &.transparent {
+            color: #7C7D94;
+          }
+        }
+      }
+    }
+  }
+}
+
+.copyRight {
+  padding: 15px;
+}

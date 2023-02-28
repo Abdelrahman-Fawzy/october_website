@@ -1,1 +1,38 @@
-/* You can add global styles to this file, and also import other style files */
+@import "abstracts/mixins", "abstracts/variables";
+
+body {
+  font-family: 'Cairo', sans-serif !important;
+  background-color: $backgroundColor;
+  box-sizing: border-box;
+  direction: rtl;
+}
+
+// framework
+.box-shadow {
+  box-shadow: 0 24px 72px rgb(0 0 0 / 16%);
+}
+
+.form-control {
+  border-color: $orange !important;
+  border-radius: $borderRadius - 11;
+  height: calc(2em + 0.7rem + 2px);
+  padding: 0.5rem .75rem;
+  font-size: $fontSize - 1;
+  color: $blackvtwo;
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+button.primary {
+  @include buttons($orange, $orange, $white, $fontSize , $orange, $white);
+}
+button.primary-outline {
+  @include buttons(transparent, $orange, $orange, $fontSize, $white,$orange);
+}
+
+/* Importing Bootstrap SCSS file. */
+@import "./node_modules/bootstrap/scss/bootstrap";
+
+/* Importing Datepicker SCSS file. */
+@import "node_modules/ngx-bootstrap/datepicker/bs-datepicker";

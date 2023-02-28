@@ -1,0 +1,10 @@
+@import "../abstracts/mixins", "../abstracts/variables";
+
+button {
+  @include buttons($orange,$orange,$white,$fontSize, $orange, $white);
+}
+
+button.second {
+  @include buttons(transparent, $orange, $orange, $fontSize, $white, $orange);
+  margin: 0 1em;
+}

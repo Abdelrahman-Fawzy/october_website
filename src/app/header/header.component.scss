@@ -1,0 +1,88 @@
+@import "../../abstracts/variables", "../../abstracts/mixins";
+
+.small-nav {
+  display: flex;
+  justify-content: space-evenly;
+  background: $orange;
+  align-items: center;
+  padding: 0.5em;
+  ul.services_lists {
+    display: flex;
+    gap: 1em;
+    margin: 0;
+    li {
+      a {
+        color: $white;
+        font-weight: 600;
+      }
+    }
+  }
+  .search_box {
+    margin: 0;
+    background: $white;
+    padding: 5px;
+    border-radius: $borderRadius - 16;
+    img {
+      margin: 0 10px;
+    }
+    input {
+      border: none;
+      background: transparent;
+      outline: none;
+    }
+  }
+  .language-social {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 2em;
+      margin: 0;
+      li {
+        fa-icon {
+          font-size: $fontSize + 4;
+          color: $white;
+          cursor: pointer;
+        }
+      }
+    }
+    .dropdown-toggle {
+      background: transparent;
+      border: none;
+      color: $white;
+      font-weight: 600;
+      img {
+        width: 35px;
+        height: 35px;
+        margin: 0 12px;
+      }
+    }
+  }
+}
+
+.navbar {
+  padding: .5rem 3rem;
+  box-shadow: 0 3px 30px rgb(0 0 0 / 16%);
+  a.navbar-brand {
+    width: 70px;
+    height: 70px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .navbar-collapse {
+    justify-content: space-evenly;
+    ul.navbar-nav {
+      gap: 1em;
+      li {
+        a {
+          color: $blackvthree;
+          font-size: $fontSize + 3;
+        }
+      }
+    }
+  }
+}
