@@ -1,8 +1,13 @@
 @import "../../abstracts/variables", "../../abstracts/mixins";
 
+.fixed {
+  position: fixed;
+  width: 100%;
+  z-index: 9;
+}
 .small-nav {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   background: $orange;
   align-items: center;
   padding: 0.5em;
@@ -22,6 +27,7 @@
     background: $white;
     padding: 5px;
     border-radius: $borderRadius - 16;
+    min-width: 320px;
     img {
       margin: 0 10px;
     }
@@ -65,8 +71,8 @@
 .navbar {
   padding: .5rem 3rem;
   box-shadow: 0 3px 30px rgb(0 0 0 / 16%);
+  background: $white;
   a.navbar-brand {
-    width: 70px;
     height: 70px;
     img {
       width: 100%;
@@ -81,6 +87,10 @@
         a {
           color: $blackvthree;
           font-size: $fontSize + 3;
+          &.active {
+            color: $orange;
+            font-weight: 600;
+          }
         }
       }
     }

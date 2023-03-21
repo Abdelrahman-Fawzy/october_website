@@ -1,0 +1,48 @@
+@import "../../abstracts/variables", "../../abstracts/mixins";
+
+.universities {
+  margin: 0 2em;
+  .card {
+    margin-bottom: 2em;
+    h3.university-name {
+      font-weight: bold;
+    }
+    p.university-description {
+      font-size: 18px;
+      color: #353535;
+    }
+    .information {
+      display: flex;
+      justify-content: space-between;
+      .price-info {
+        .price {
+          display: flex;
+          align-items: baseline;
+          gap: 10px;
+          span:first-child {
+            font-weight: bold;
+            font-size: 20px;
+          }
+          span:last-child {
+            font-size: 18px;
+            text-decoration: line-through;
+          }
+        }
+      }
+      .global-info {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        .global, .programs-count {
+          img {
+            width: 25px;
+            height: 25px;
+          }
+          span {
+            margin: 0 10px;
+          }
+        }
+      }
+    }
+  }
+}

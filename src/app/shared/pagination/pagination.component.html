@@ -1,0 +1,25 @@
+<div class="pagination-list">
+  <ul class="list-unstyled pagination">
+    <li class="btn prev" *ngIf="page > 1" (click)="page = page - 1">
+      <img src="assets/images/icons/prev.png" alt="">
+      <span>prev</span>
+    </li>
+    <ng-container *ngFor="let item of pagination;let i = index;">
+      <li [ngClass]="page - 1 == i ? 'active' : ''" *ngIf="i < 7">
+        <a>
+          {{ i < 7 ? item : ''}}
+        </a>
+      </li>
+    </ng-container>
+    <li class="dots" *ngIf="pagination.length > 7">
+      <a>...</a>
+    </li>
+    <li>
+      <a>{{pagination.length}}</a>
+    </li>
+    <li class="btn next" *ngIf="page < totalPages" (click)="page = page + 1">
+      <span>next</span>
+      <img src="assets/images/icons/next.png" alt="">
+    </li>
+  </ul>
+</div>

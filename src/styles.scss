@@ -2,9 +2,23 @@
 
 body {
   font-family: 'Cairo', sans-serif !important;
-  background-color: $backgroundColor;
+  background-color: $backgroundColor !important;
   box-sizing: border-box;
   direction: rtl;
+  text-align: right !important;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  width: 0.3em;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #444;
 }
 
 // framework
@@ -17,8 +31,10 @@ body {
   border-radius: $borderRadius - 11;
   height: calc(2em + 0.7rem + 2px);
   padding: 0.5rem .75rem;
-  font-size: $fontSize - 1;
-  color: $blackvtwo;
+  font-size: $fontSize - 1 !important;
+  color: $greyVtwo !important;
+  outline: none;
+  &::placeholder {color: $greyVtwo !important;}
   &:focus {
     outline: none;
     box-shadow: none;
@@ -29,6 +45,150 @@ button.primary {
 }
 button.primary-outline {
   @include buttons(transparent, $orange, $orange, $fontSize, $white,$orange);
+}
+.actions {
+  display: flex;
+  gap: 1em;
+}
+img.loaf {
+  position: absolute;
+  bottom: -35px;
+  right: -35px;
+  z-index: -1;
+  width: 70px;
+}
+img.loaf.topLoaf {
+  transform: rotate(275deg);
+  top: -35px;
+  right: -35px;
+}
+.pagination {
+  justify-content: center;
+  direction: ltr;
+  align-items: center;
+  gap: 10px;
+  .btn, a {
+    background-color: $white;
+    border: 1px solid #D8DAE5;
+    color: #051B44;
+    border-radius: 4px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+  }
+  .active a,
+  li:hover a {
+    background-color: $orange;
+    color: $white !important;
+    text-decoration: none;
+  }
+  .btn {
+    img {
+      width: 20px;
+      height: 20px;
+      margin: 0 7px;
+    }
+  }
+  a {
+    width: 30px;
+  }
+}
+aside.aside-filter {
+  .panel {
+    border: none;
+    border-radius: 0;
+    .panel-heading {
+      background: transparent;
+      padding-top: 0;
+      button {
+        color: #000;
+        font-weight: bold;
+        text-decoration: none;
+      }
+    }
+    .panel-body {
+      padding-bottom: 0;
+    }
+  }
+  &::-webkit-scrollbar {
+    width: 0.1em;
+  }
+
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $orange;
+  }
+}
+.checkbox_container {
+  display: block;
+  position: relative;
+  padding-right: 35px;
+  margin-bottom: 17px;
+  cursor: pointer;
+  font-size: 18px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox_container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 22px;
+  width: 22px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox_container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox_container input:checked ~ .checkmark {
+  background-color: $orange;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox_container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox_container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 6px;
+  height: 10px;
+  border: solid $white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 /* Importing Bootstrap SCSS file. */

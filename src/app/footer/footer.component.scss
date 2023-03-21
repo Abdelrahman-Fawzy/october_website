@@ -19,7 +19,6 @@ footer {
     top: -70px;
     box-shadow: 0 6px 50px rgb(0 0 0 / 16%);
     .messages {
-      text-align: right;
       h5 {
         color: $footerColor;
         font-weight: 600;
@@ -34,7 +33,6 @@ footer {
     }
   }
   .logo {
-    width: 140px;
     height: 140px;
     margin-bottom: 1em;
     margin: auto;
@@ -98,7 +96,7 @@ footer {
   .actions {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: end;
     margin-bottom: 1em;
     button {
       padding: 10px 2em;
@@ -107,6 +105,7 @@ footer {
   ul.contacts {
     li {
       margin-bottom: 1em;
+      text-align: left;
       a {
         color: $white;
         span {
