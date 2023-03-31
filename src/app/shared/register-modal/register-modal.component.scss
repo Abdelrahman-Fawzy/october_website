@@ -1,0 +1,82 @@
+@import "../../../abstracts/variables", "../../../abstracts/mixins";
+.phone {
+  padding: 0.17rem 0.75rem;
+  display: flex;
+  align-items: center;
+  border: 1px solid $orange;
+  border-radius: 0.25rem;
+  gap: 10px;
+  .form-group {
+    margin-bottom: 0;
+    select, input {
+      border: none;
+    }
+    input { width: 100%; }
+  }
+}
+.files-upload {
+  display: flex;
+  gap: 2em;
+  align-items: center;
+  .required-documents {
+    flex: 1.5;
+    & > span {
+      display: block;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    ul {
+      padding: 0;
+      li {
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        .doc-status {
+          width: 20px;
+          height: 20px;
+          display: inline-block;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+    .uploaded-files {
+      ul {
+        padding: 0;
+        li {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          span.file-size {
+            img {
+              width: 20px;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+  .attchmentsArea {
+    flex: 3;
+  }
+}
+button.send {
+  display: block;
+  margin: 2em auto;
+}
+.confirmed {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 450px;
+  }
+  p {
+    font-size: 25px;
+    font-weight: bold;
+  }
+}

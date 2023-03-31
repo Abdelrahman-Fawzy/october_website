@@ -167,6 +167,11 @@
           input { width: 100%; }
         }
       }
+      .inquiry {
+        display: flex;
+        justify-content: space-between;
+        span.hint { color:  $orange; }
+      }
       textarea { resize: none; }
       button.primary {
         display: block;

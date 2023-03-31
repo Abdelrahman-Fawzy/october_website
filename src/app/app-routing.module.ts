@@ -1,3 +1,4 @@
+import { UniversityDetailsComponent } from './universities/university-details/university-details.component';
 import { StudyMajorsComponent } from './study-majors/study-majors.component';
 import { UniversitiesComponent } from './universities/universities.component';
 import { HomeComponent } from './home/home.component';
@@ -13,6 +14,11 @@ const routes: Routes = [
   {
     path: 'universities',
     component: UniversitiesComponent,
+    pathMatch: 'full'
+  },
+  {
+    path: 'universities/:id',
+    component: UniversityDetailsComponent,
     pathMatch: 'full'
   },
   {

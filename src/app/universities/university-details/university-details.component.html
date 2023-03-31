@@ -1,0 +1,606 @@
+<div class="container">
+  <div class="university-gallery">
+    <div class="slides">
+      <div class="mySlides">
+        <img src="assets/images/csc.png">
+      </div>
+      <div class="mySlides">
+        <img src="assets/images/universities/Bora Bora.png">
+      </div>
+      <div class="mySlides">
+        <img src="assets/images/universities/New Zealand.png">
+      </div>
+      <div class="mySlides">
+        <img src="assets/images/universities/Paris.png">
+      </div>
+      <a class="prev" (click)="plusSlides(-1)">&#10095;</a>
+      <a class="next" (click)="plusSlides(1)">&#10094;</a>
+    </div>
+    <div class="images">
+      <div class="column">
+        <img class="demo cursor" src="assets/images/csc.png" (click)="currentSlide(1)">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="assets/images/universities/Bora Bora.png" (click)="currentSlide(2)">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="assets/images/universities/New Zealand.png" (click)="currentSlide(3)">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="assets/images/universities/Paris.png" (click)="currentSlide(4)">
+      </div>
+    </div>
+  </div>
+  <div class="university-details">
+    <ul class="list-unstyled details">
+      <li>
+        <img src="assets/images/icons/university.svg" alt="">
+        <span>نوع الجامعة : خاصة</span>
+      </li>
+      <li>
+        <img src="assets/images/icons/locate.svg" alt="">
+        <span>المدينة : اسطنبول</span>
+      </li>
+      <li>
+        <img src="assets/images/icons/global.png" alt="">
+        <span>التصنيف العالمي : 2225</span>
+      </li>
+      <li>
+        <img src="assets/images/icons/open-book.png" alt="">
+        <span>عدد البرامج الدراسية : 98</span>
+      </li>
+      <li>
+        <img src="assets/images/icons/reading-book.svg" alt="">
+        <span>عدد الطلاب : 27,500</span>
+      </li>
+    </ul>
+    <div class="actions">
+      <ul class="list-unstyled">
+        <li>جامعة اسطنبول ميديبول</li>
+        <li>الدراسة  في تركيا</li>
+      </ul>
+      <button class="primary" (click)="register()">سجل الان</button>
+    </div>
+  </div>
+  <div class="university-details">
+    <ul class="list-unstyled details">
+      <li>
+        <img src="assets/images/icons/coins.svg" alt="">
+        <span>4,320 / عام بدلا من <span>6000 / عام</span></span>
+      </li>
+      <li>
+        <img src="assets/images/icons/badge-percent.svg" alt="">
+        <span>خصم 28 %</span>
+      </li>
+      <li>
+        <img src="assets/images/icons/marker.svg" alt="">
+        <span>التصنيف المحلى : 51</span>
+      </li>
+      <li>
+        <img src="assets/images/icons/calendar.svg" alt="">
+        <span>تاريخ التسجيل : 01/01/1970</span>
+      </li>
+    </ul>
+    <div class="remaining-time">
+      <img src="assets/images/icons/stopwatch.svg" alt="">
+      <span>الوقت المتبقي :  00 days  -  00 hours  -  00 min</span>
+    </div>
+  </div>
+  <div class="university-information">
+    <div class="information-tabs">
+      <button class="tablinks" (click)="openTab($event, 'university_introduction', false)" id="defaultOpen">التعريف بالجامعة</button>
+      <button class="tablinks" (click)="openTab($event, 'study_programmes', false)">البرامج الدراسية</button>
+      <button class="tablinks" (click)="openTab($event, 'university_housing', false)">السكن الجامعي</button>
+      <button class="tablinks" (click)="openTab($event, 'campus', false)">الحرم الجامعي</button>
+      <button class="tablinks" (click)="openTab($event, 'confessions', false)">الاعترافات</button>
+      <button class="tablinks" (click)="openTab($event, 'students_opinions', false)">اراء الطلاب</button>
+    </div>
+    <div class="information-contents">
+      <div class="tabContent" id="university_introduction">
+        <button type="button" (click)="isIntroCollapsed = !isIntroCollapsed"
+          [attr.aria-expanded]="!isIntroCollapsed" aria-controls="intro">
+          <div class="info">
+            <img src="assets/images/icons/university.svg" alt="">
+            <span>التعريف بالجامعة</span>
+          </div>
+          <img src="assets/images/icons/vectorArrow.png" alt="" [ngStyle]="{'transform' : isIntroCollapsed ? 'rotate(180deg)' : ''}">
+        </button>
+        <div class="university_content" id="intro" [collapse]="isIntroCollapsed" [isAnimated]="true">
+          <span>هذا المقال بقلم: حسناء ناصر</span>
+          <p>جامعة إسطنبول ميديبول هي واحدة من أكبر جامعات تركيا التي تشتهر بحصولها على أشهر الشهادات والاعتمادات الدولية في مجال الطب بالإضافة إلى توفير خدمات متنوعة لطلابها تجعلها من أكثر الجامعات التركية إقبالًا عند الطلاب العرب، هذا ما سنتعرف عليه خلال السطور التالية من دليل عن جامعة ميديبول</p>
+          <div class="information-details">
+            <div class="information">
+              <div class="information__header">
+                معلومات عامة عن جامعة ميديبول
+              </div>
+              <div class="information__body">
+                <ul class="list-unstyled">
+                  <li>حرم الجامعة إسطنبول ميديبول</li>
+                  <li>مواقع الكليات الدراسية بالنسبة
+                    للحرم الجامعي </li>
+                  <li>
+                    رؤية وقيم جامعة ميديبول
+                  </li>
+                  <li>
+                    اعتمادات جامعة إسطنبول ميديبول
+                  </li>
+                  <li>
+                    جامعة إسطنبول ميديبول في أرقام
+                  </li>
+                  <li>
+                    تصنيف جامعة إسطنبول ميديبول
+                    محليًا وعالميً
+                  </li>
+                  <li>
+                    شراكات الجامعة مع مؤسسات قوية
+                  </li>
+                  <li>
+                    مميزات الدراسة في جامعة ميديبول
+                  </li>
+                  <li>
+                    أهم التخصصات الدراسية في جامعة ميديبول
+                  </li>
+                  <li>
+                    مميزات دراسة الطب البشري وطب الأسنان في جامعة ميديبول
+                  </li>
+                  <li>
+                    مميزات دراسة الهندسة بجامعة ميديبول
+                  </li>
+                  <li>
+                    التدريب العملي في ميديبول
+                  </li>
+                  <li>
+                    البحث العلمي في ميديبول
+                  </li>
+                  <li>
+                    الخدمات والترفيه في ميديبول
+                  </li>
+                  <li>
+                    كليات وتخصصات جامعة ميديبول
+                  </li>
+                  <li>
+                    راسة الماجستير والدكتوراه في جامعة ميديبول
+                  </li>
+                  <li>
+                    رسوم جامعة إسطنبول ميديبول
+                  </li>
+                  <li>
+                    خصم للطلاب من بعض الدول
+                  </li>
+                  <li>
+                    الأوراق المطلوبة للتقديم
+                  </li>
+                  <li>
+                    اختبارات اللغة ونماذج
+                  </li>
+                  <li>
+                    فيديو لقاء في جامعة إسطنبول ميديبول
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="content">
+              <h3>معلومات عامة عن جامعة إسطنبول ميديبول</h3>
+              <div class="information-details-list">
+                <ul>
+                  <li>
+                    جامعة ميديبول هي جامعة خاصة تركية تأسست عام 2009 في مدينة إسطنبول كجامعة بحثية طبية، ثم ضمت بعد ذلك العديد من الكليات مثل كلية الهندسة، وتعد الجامعة من أفضل الجامعات التركية
+                  </li>
+                  <li>
+                    ويرجع هدف تأسيس جامعة ميديبول في إسطنبول إلى كونها مؤسسة بحثية ليس أكثر، ثم تم التطوير منها حتى توسعت وأصبحت من أهم وأكبر الجامعات الخاصة بتركيا التي تتضمن أغلب التخصصات الدراسية
+                  </li>
+                  <li>
+                    أكثر تخصص تشتهر به جامعة ميديبول في تركيا هو التخصص الطبي لذلك يطلق عليها جامعة اسطنبول الطبية، إذ تمتلك الجامعة واحدة من أكبر المستشفيات في تركيا وهي مستشفى الجامعة للطب البشري وإلى جانب عدة مستشفيات ومراكز طبية أخرى
+                  </li>
+                  <li>
+                    للجامعة حاليًا فرعين: فرع في مدينة إسطنبول وفرع آخر في مدينة أنقرة
+                  </li>
+                </ul>
+                <div class="university-img">
+                  <img src="assets/images/univ.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tabContent" id="study_programmes">
+        <button type="button" (click)="isStudyCollapsed = !isStudyCollapsed"
+          [attr.aria-expanded]="!isStudyCollapsed" aria-controls="study">
+          <div class="info">
+            <img src="assets/images/icons/book.png" alt="">
+            <span>البرامج الدراسية</span>
+          </div>
+          <img src="assets/images/icons/vectorArrow.png" alt="" [ngStyle]="{'transform' : isStudyCollapsed ? 'rotate(180deg)' : ''}">
+        </button>
+        <div class="university_content" id="study" [collapse]="isStudyCollapsed" [isAnimated]="true">
+          <div class="study_tab">
+            <button class="tabChildlinks" (click)="openTab($event, 'diplom', true)" id="defaultChildOpen">دبلومة عامين (42) </button>
+            <button class="tabChildlinks" (click)="openTab($event, 'bachelor', true)">بكالوريوس</button>
+          </div>
+          <div class="study_content_tab" id="diplom">
+            <div class="sections">
+              <div class="sections__header">
+                هندسة معمارية
+              </div>
+              <div class="sections__body">
+                <ul class="list-unstyled">
+                  <li>اسمعيات</li>
+                  <li>الخدمات المصرفية</li>
+                  <li>الهندسة الطبية الحيوية</li>
+                  <li>علوم ادارية</li>
+                  <li>هندسة مدنية</li>
+                  <li>الاقتصاد</li>
+                  <li>الطهي</li>
+                  <li>الصحة</li>
+                  <li>ادارة الموارد البشرية</li>
+                  <li>صناعية</li>
+                  <li>الخدمات اللوجستية</li>
+                  <li>التجارة الدولية</li>
+                </ul>
+              </div>
+            </div>
+            <div class="content">
+              <div class="table-responsive">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>اسم البرنامج الدراسى</th>
+                      <th>مدة الدراسة</th>
+                      <th>اللغة</th>
+                      <th>السعر بالجنية</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>العمارة</td>
+                      <td>4 أعوام</td>
+                      <td>الإنجليزية</td>
+                      <td>
+                        6120 بدلا من <span>8500</span> / عام
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>العمارة الداخلية
+                        والتصميم البيئي</td>
+                      <td>4 أعوام</td>
+                      <td>الإنجليزية</td>
+                      <td>
+                        6120 بدلا من <span>8500</span> / عام
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>التصميم العمراني
+                        وعمارة المناظر الطبيعية</td>
+                      <td>4 أعوام</td>
+                      <td>الإنجليزية</td>
+                      <td>
+                        6120 بدلا من <span>8500</span> / عام
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="study_content_tab" id="bachelor">
+            <div class="sections">
+              <div class="sections__header">
+                هندسة معمارية
+              </div>
+              <div class="sections__body">
+                <ul class="list-unstyled">
+                  <li>اسمعيات</li>
+                  <li>الخدمات المصرفية</li>
+                  <li>الهندسة الطبية الحيوية</li>
+                  <li>علوم ادارية</li>
+                  <li>هندسة مدنية</li>
+                  <li>الاقتصاد</li>
+                  <li>الطهي</li>
+                  <li>الصحة</li>
+                  <li>ادارة الموارد البشرية</li>
+                  <li>صناعية</li>
+                  <li>الخدمات اللوجستية</li>
+                  <li>التجارة الدولية</li>
+                </ul>
+              </div>
+            </div>
+            <div class="content">
+              <div class="table-responsive">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>اسم البرنامج الدراسى</th>
+                      <th>مدة الدراسة</th>
+                      <th>اللغة</th>
+                      <th>السعر بالجنية</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>العمارة</td>
+                      <td>4 أعوام</td>
+                      <td>الإنجليزية</td>
+                      <td>
+                        6120 بدلا من <span>8500</span> / عام
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>العمارة الداخلية
+                        والتصميم البيئي</td>
+                      <td>4 أعوام</td>
+                      <td>الإنجليزية</td>
+                      <td>
+                        6120 بدلا من <span>8500</span> / عام
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>التصميم العمراني
+                        وعمارة المناظر الطبيعية</td>
+                      <td>4 أعوام</td>
+                      <td>الإنجليزية</td>
+                      <td>
+                        6120 بدلا من <span>8500</span> / عام
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tabContent" id="university_housing">
+        <button type="button" (click)="isHousingCollapsed = !isHousingCollapsed"
+          [attr.aria-expanded]="!isHousingCollapsed" aria-controls="study">
+          <div class="info">
+            <img src="assets/images/icons/housing.png" alt="">
+            <span>السكن الجامعي</span>
+          </div>
+          <img src="assets/images/icons/vectorArrow.png" alt="" [ngStyle]="{'transform' : isHousingCollapsed ? 'rotate(180deg)' : ''}">
+        </button>
+        <div class="university_content" id="housing" [collapse]="isHousingCollapsed" [isAnimated]="true">
+          <div class="row">
+            <div class="col-md-6" *ngFor="let item of [1, 2, 3, 4 , 5, 6, 7, 8]">
+              <div class="room">
+                <div class="room__img">
+                  <img src="assets/images/room.png" alt="">
+                </div>
+                <div class="room__info">
+                  <span class="room-name">اسم الغرفة</span>
+                  <span class="room-size">
+                    <img src="assets/images/icons/users.png" alt="">
+                    <span>6 أشخاص</span>
+                  </span>
+                  <span class="room-gender">
+                    <img src="assets/images/icons/gender.png" alt="">
+                    <span>رجال</span>
+                  </span>
+                  <span class="room-price">
+                    <img src="assets/images/icons/price.png" alt="">
+                    <span>9800 + 500TL / شهر</span>
+                  </span>
+                </div>
+                <div class="room__register">
+                  <button>
+                    <img src="assets/images/icons/forward.png" alt="">
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tabContent" id="campus">
+        <button type="button" (click)="isCampusCollapsed = !isCampusCollapsed"
+          [attr.aria-expanded]="!isCampusCollapsed" aria-controls="study">
+          <div class="info">
+            <img src="assets/images/icons/map-marker.png" alt="">
+            <span>موقع الجامعة</span>
+          </div>
+          <img src="assets/images/icons/vectorArrow.png" alt="" [ngStyle]="{'transform' : isCampusCollapsed ? 'rotate(180deg)' : ''}">
+        </button>
+        <div class="university_content" id="campuss" [collapse]="isCampusCollapsed" [isAnimated]="true">
+          <ul class="univ-list-data">
+            <li>
+              <span>موقع الجامعة بمدينة إسطنبول</span>
+              <ul class="list-unstyled childUl">
+                <li>
+                  - تمتلك جامعة ميديبول في تركيا أكثر من حرم جامعي
+                </li>
+              </ul>
+            </li>
+            <li>
+              <span>حرم منطقة كافاجيك</span>
+              <ul class="list-unstyled childUl">
+                <li>
+                  - ينقسم حرم الجامعة الي حرمين جامعيين " الحرم الجنوبي و الحرم الشمالي " و يعد هو الحرم الرئيسي و الأكبر لجامعة إسطنبول و يطلق عليها جامعة ميديبول القسم الأسيوي
+                </li>
+                <li>
+                  - يقع حرم كافاجيك فى منطقة بيكوز على الجانب الأناضولي قبل جسر السلطان محمد الفاتح. وهو يتميز بالملاعب الرياضية للجامعة من ملاعب كرة القدم، وملاعب كرة السلة
+                </li>
+                <li>
+                  - كما أن هذا الحرم يتضمن المختبرات والمعامل، وسكن الطلاب الخاص بالبنين وبالبنات أيضًا
+                </li>
+              </ul>
+            </li>
+            <li>
+              <span>حرم هاليك</span>
+              <ul class="list-unstyled childUl">
+                <li>
+                  - يقع حرم جولدن هورن على حافة القرن الذهبي وهو يتميز بموقع المركزي في المدينة
+                </li>
+                <li>
+                  - يضم مبنى جامعة إسطنبول ميديبول في حرم هاليك حوالي 20 نادي خاص بطلاب الجامعة، وإلى جانب الأماكن الترفيهية مثل، السينما والمسرح وقاعات الموسيقى
+                </li>
+              </ul>
+            </li>
+            <li>
+              <span>حرم باغيجلار</span>
+              <ul class="list-unstyled childUl">
+                <li>
+                  - تحرص جامعة ميديبول إسطنبول بالإشارة إلى مجمع المستشفيات الخاص بها الواقع في باغيجلار بأنه حرم خاص بها ومن أهم حرام الجامعة
+                </li>
+                <li>
+                  - يتضمن حرم باغيجلار :
+                    <ul class="mt-3">
+                      <li>مستشفى ميديبول العام</li>
+                      <li>مستشفى ميديبول لطب الأورام</li>
+                      <li>مستشفى ميديبول لجراحة القلب والأوعية الدموية</li>
+                      <li>مستشفى ميديبول لطب الأسنان</li>
+                    </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <p class="vr">كما يمكنك أخذ جولة من خلال تقنية VR <button class="primary">VR</button></p>
+        </div>
+      </div>
+      <div class="tabContent" id="confessions">
+        <button type="button" (click)="isConfessCollapsed = !isConfessCollapsed"
+          [attr.aria-expanded]="!isConfessCollapsed" aria-controls="study">
+          <div class="info">
+            <img src="assets/images/icons/confusion.png" alt="">
+            <span>اعتمادات الجامعة</span>
+          </div>
+          <img src="assets/images/icons/vectorArrow.png" alt="" [ngStyle]="{'transform' : isConfessCollapsed ? 'rotate(180deg)' : ''}">
+        </button>
+        <div class="university_content" id="confess" [collapse]="isConfessCollapsed" [isAnimated]="true">
+          <ul class="univ-list-data">
+            <li>
+              <span>اعتمادات جامعة إسطنبول ميديبول</span>
+              <ul class="list-unstyled childUl">
+                <li>
+                  - تفخر جامعة إسطنبول ميديبول برحلتها في الحصول على الاعتمادات المختلفة منذ بداية تأسيسها حتى وقتها هذا، وإليك اعتمادات الجامعة المُشار إليها عبر مع جامعة Medipol الرسمي
+                </li>
+              </ul>
+            </li>
+            <li *ngFor="let item of [1, 2, 3, 4, 5, 6, 7, 8]">
+              <span>اعتماد ECZAKDER</span>
+              <ul class="list-unstyled childUl">
+                <li>
+                  - هو اعتماد دولي لدراسة علوم الصيدلة وهو يفيد الجامعة في تطبيق أحدث العلوم والمناهج والنظريات في مجال الطب والصحة والصيدلة
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="tabContent" id="students_opinions">
+        <button type="button" (click)="isOpinionsCollapsed = !isOpinionsCollapsed"
+          [attr.aria-expanded]="!isOpinionsCollapsed" aria-controls="study">
+          <div class="info">
+            <img src="assets/images/icons/reviews.png" alt="">
+            <span>اراء الطلاب</span>
+          </div>
+          <img src="assets/images/icons/vectorArrow.png" alt="" [ngStyle]="{'transform' : isOpinionsCollapsed ? 'rotate(180deg)' : ''}">
+        </button>
+        <div class="university_content" id="confess" [collapse]="isOpinionsCollapsed" [isAnimated]="true">
+          <div class="row">
+            <div class="col-md-6" *ngFor="let item of [1, 2, 3, 4, 5, 6, 7, 8]">
+              <div class="review">
+                <div class="student-info">
+                  <div class="student-img">
+                    <img src="assets/images/stud.png" alt="">
+                  </div>
+                  <h4>اسم الطالب</h4>
+                  <div class="rating">
+                    <fa-icon [icon]="faStar" class="checked"></fa-icon>
+                    <fa-icon [icon]="faStar" class="checked"></fa-icon>
+                    <fa-icon [icon]="faStar" class="checked"></fa-icon>
+                    <fa-icon [icon]="faStar"></fa-icon>
+                    <fa-icon [icon]="faStar"></fa-icon>
+                  </div>
+                </div>
+                <div class="student-review">
+                  <p>لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="about-university">
+    <div class="row">
+      <div class="col-md-7">
+        <div class="getInquiry">
+          <h3>تود معرفة المزيد عن الجامعة؟</h3>
+          <p>أدخل استفسارك لكي نتواصل معك</p>
+          <form>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="name">الاسم الأول</label>
+                  <input type="text" class="form-control" id="name" placeholder="اكتب اسمك هنا ...">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="name">الاسم الاخير</label>
+                  <input type="text" class="form-control" id="name" placeholder="اكتب اسمك هنا ...">
+                </div>
+              </div>
+            </div>
+            <div class="row" style="margin-top: 1em;">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="name">رقم الهاتف</label>
+                  <div class="phone">
+                    <div class="form-group">
+                      <select id="phoneCountry">
+                        <option>1</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <input type="text" id="name" placeholder="phone">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="email">البريد الالكترونى (Email)</label>
+                  <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                </div>
+              </div>
+            </div>
+            <div class="row" style="margin-top: 1em;">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label class="inquiry" for="inquiry">
+                    <span>استفسارك</span>
+                    <span class="hint">بحد ادنى 30 حرف</span>
+                  </label>
+                  <textarea class="form-control" id="inquiry" rows="4"></textarea>
+                </div>
+              </div>
+            </div>
+            <button class="primary">أرسل طلبك</button>
+          </form>
+          <img class="loaf topLoaf" src="assets/images/main_assets/loaf.png" alt="loaf">
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div class="related-universities">
+          <div class="related-universities__header">
+            <span>جامعات ذات صلة</span>
+          </div>
+          <div class="related-universities__body">
+            <div class="university" *ngFor="let item of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]">
+              <div class="university__logo">
+                <img src="assets/images/main_assets/logo.png" alt="">
+              </div>
+              <div class="university__data">
+                <h4>جامعة اسطنبول ميديبول</h4>
+                <span>نوع الجامعة :خاصة - المدينة :اسطنبول</span>
+                <span>3000$ / السنة</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,549 @@
+@import "../../../abstracts/variables", "../../../abstracts/mixins";
+.university-gallery {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-bottom: 1em;
+  .slides {
+    position: relative;
+    flex: 5;
+  }
+  .mySlides {
+    display: none;
+    width: 910px;
+    height: 360px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .mySlides,
+  .images {
+    img {
+      width: 100%;
+      border-radius: 10px;
+    }
+  }
+  .images {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    .column {
+      width: 185px;
+      height: 70px;
+      img {
+        cursor: pointer;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 55%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  .prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  .demo {
+    opacity: 0.6;
+  }
+
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+}
+.university-details {
+  background: #fff;
+  padding: 1.5em;
+  border-radius: 10px;
+  margin-bottom: 1em;
+  ul.details {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    li {
+      img {
+        width: 25px;
+        height: 25px;
+      }
+      span {
+        margin: 0 8px;
+        color: #363636;
+        font-weight: 600;
+        span {
+          color: #8A8A8A;
+          text-decoration: line-through;
+        }
+      }
+    }
+  }
+  .actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    ul {
+      padding: 0;
+      margin: 0;
+      display: flex;
+      li {
+        color: #353688;
+        font-weight: 600;
+        font-size: 20px;
+        &:not(:last-child)::after {
+          content: '|';
+          margin: 0 10px;
+        }
+      }
+    }
+  }
+  .remaining-time {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 17px;
+    margin-top: 1.5em;
+    img {
+      width: 25px;
+      height: 25px;
+    }
+    span {
+      font-weight: bold;
+    }
+  }
+}
+.university-information {
+  .information-tabs {
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    button.tablinks {
+      background: transparent;
+      border: none;
+      color: #8A8A8A;
+      font-weight: bold;
+      padding: 1em;
+      font-size: 18px;
+      &.active {
+        color: $orange;
+        border-bottom: 2px solid $orange;
+      }
+    }
+  }
+  .tabContent {
+    & > button {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #fff;
+      width: 100%;
+      border: none;
+      margin-top: 10px;
+      padding: 10px 15px;
+      border-bottom: 1px solid #ccc;
+      .info {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        span { font-weight: bold; }
+        img {
+          width: 20px;
+          height: 20px;
+        }
+      }
+      & > img {
+        width: 35px;
+        transition: all 0.5s;
+      }
+    }
+    .university_content {
+      background: #fff;
+      padding: 1.5em;
+    }
+  }
+  ul.univ-list-data {
+    li {
+      & > span {
+        font-weight: bold;
+        font-size: 18px;
+      }
+      ul.childUl {
+        margin: 1em 0;
+        padding: 0;
+        li {
+          margin-bottom: 0.7em;
+        }
+      }
+    }
+  }
+  .information-contents {
+    #university_introduction {
+      .university_content {
+        p {
+          margin-bottom: 2em;
+        }
+        .information-details {
+          display: flex;
+          gap: 1em;
+          .information {
+            background: #F6F6F6;
+            border-radius: 10px;
+            max-height: 660px;
+            overflow-y: auto;
+            flex: 1.3;
+            &__header {
+              background: $orange;
+              color: #fff;
+              text-align: center;
+              font-size: 14px;
+              padding: 10px;
+              font-weight: bold;
+              border-radius: 10px;
+            }
+            &__body {
+              ul {
+                padding: 15px;
+                li { margin-bottom: 1em; }
+              }
+            }
+          }
+          .content {
+            flex: 4;
+            h3 {
+              font-size: 22px;
+              font-weight: bold;
+            }
+            .information-details-list {
+              display: flex;
+              margin-top: 2em;
+              gap: 3em;
+              ul {
+                flex: 1;
+                padding: 0 1.5em;
+                li {
+                  line-height: 2em;
+                  margin-bottom: 0.5em;
+                }
+              }
+              .university-img {
+                // flex: 1;
+                width: 400px;
+                height: 300px;
+                img {
+                  width: 100%;
+                  border: 2px solid $orange;
+                  border-radius: 22px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    #study_programmes {
+      .university_content {
+        .study_tab {
+          display: flex;
+          justify-content: space-between;
+          width: 35%;
+          margin: auto;
+          margin-bottom: 2em;
+          background: #F6F6F6;
+          padding: 8px;
+          border-radius: 20px;
+          button.tabChildlinks {
+            background: transparent;
+            border: none;
+            padding: 6px;
+            width: 50%;
+            &.active {
+              background: $orange;
+              color: #fff;
+              border-radius: 10px;
+            }
+          }
+        }
+        .study_content_tab {
+          display: none;
+          gap: 3em;
+          .sections {
+            background: #F6F6F6;
+            border-radius: 10px;
+            max-height: 450px;
+            overflow-y: auto;
+            flex: 1;
+            &__header {
+              background: $orange;
+              color: #fff;
+              text-align: center;
+              font-size: 14px;
+              padding: 10px;
+              font-weight: bold;
+              border-radius: 10px;
+            }
+            &__body {
+              ul {
+                padding: 15px;
+                li { margin-bottom: 1em; text-align: center; font-weight: bold;}
+              }
+            }
+          }
+          .content {
+            flex: 3;
+            .table-responsive {
+              overflow-y: hidden;
+              table {
+                width: 100%;
+                border: 1px solid #DADADA;
+                border-radius: 10px;
+                border-collapse: separate;
+                border-spacing: 0;
+                th, td { padding: 15px; }
+                th {
+                  background: #F6F6F6;
+                  border-bottom: 1px solid #707070;
+                  &:first-child {
+                    border-top-right-radius: 10px;
+                  }
+                  &:last-child {
+                    border-top-left-radius: 10px;
+                  }
+                }
+                td {
+                  border-bottom: 1px solid #DADADA;
+                  &:last-child {
+                    font-weight: bold;
+                    span {
+                      color: #A2A2A2;
+                    }
+                  }
+                }
+                tbody tr:nth-child(even) {
+                  background: #F6F6F6;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    #university_housing {
+      .university_content {
+        max-height: 925px;
+        overflow-y: auto;
+      }
+      .room {
+        border: 1px solid #DEDEDE;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 2em;
+        &__img {
+          padding: 15px;
+          width: 250px;
+          img { border-radius: 10px; width: 100%; height: 100%; }
+        }
+        &__info {
+          padding: 15px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          & > span {
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+            font-weight: bold;
+            gap: 9px;
+            &.room-name {
+              color: #353688;
+            }
+          }
+        }
+        &__register {
+          button {
+            height: 100%;
+            border: none;
+            background: $orange;
+            border-radius: 10px;
+          }
+        }
+      }
+    }
+    #campus {
+      p.vr {
+        font-weight: bold;
+        button {
+          margin: 0 2em;
+        }
+      }
+    }
+    #students_opinions {
+      .university_content {
+        max-height: 680px;
+        overflow-y: auto;
+      }
+      .review {
+        border: 1px solid #DEDEDE;
+        border-radius: 10px;
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        gap: 1em;
+        margin-bottom: 2em;
+        .student-info {
+          flex: 0.7;
+          text-align: center;
+          .student-img {
+            width: 70px;
+            height: 70px;
+            margin: auto;
+            img {
+              width: 100%;
+              border-radius: 50%;
+            }
+          }
+          h4 {
+            font-size: 18px;
+            margin: 0;
+            margin-top: 0.5em;
+            margin-bottom: 0.3em;
+            font-weight: bold;
+            color: #353688;
+          }
+          .rating {
+            fa-icon {
+              font-size: 14px;
+              &.checked {
+                color: $orange;
+              }
+            }
+          }
+        }
+        .student-review {
+          flex: 2;
+          p {
+            color: #363636;
+            line-height: 2em;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
+.about-university {
+  margin-top: 4em;
+  .getInquiry {
+    padding: 35px;
+    border-radius: 21px;
+    box-shadow: 0 3px 60px rgb(0 0 0 / 16%);
+    background-color: $white;
+    position: relative;
+    h3 {
+      font-weight: 600;
+      span {
+        color: $orange;
+      }
+    }
+    p {
+      color: #727272;
+      margin: 1em 0;
+      line-height: 25px;
+    }
+    form {
+      margin-top: 3em;
+      .phone {
+        padding: 0.17rem 0.75rem;
+        display: flex;
+        align-items: center;
+        border: 1px solid $orange;
+        border-radius: 0.25rem;
+        justify-content: space-between;
+        .form-group {
+          margin-bottom: 0;
+          select, input {
+            border: none;
+          }
+          input { width: 100%; }
+        }
+      }
+      .inquiry {
+        display: flex;
+        justify-content: space-between;
+        span.hint { color:  $orange; }
+      }
+      textarea { resize: none; }
+      button.primary {
+        display: block;
+        margin: auto;
+      }
+    }
+    img.loaf {z-index: 0;}
+  }
+  .related-universities {
+    background: #1D2A3B;
+    color: #fff;
+    border-radius: 20px;
+    &__header {
+      padding: 15px;
+      text-align: center;
+      font-size: 20px;
+      border-bottom: 1px solid;
+    }
+    &__body {
+      max-height: 535px;
+      overflow-y: auto;
+      padding: 1.5em;
+      .university {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        padding-bottom: 1em;
+        margin-bottom: 1em;
+        &:not(:last-child) {border-bottom: 1px solid;}
+        &__logo {
+          width: 90px;
+          height: 90px;
+          background: #fff;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          img {
+            width: 80%;
+            height: 65%;
+          }
+        }
+        &__data {
+          h4 { font-weight: bold; font-size: 22px; }
+          span {
+            display: inline-block;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}

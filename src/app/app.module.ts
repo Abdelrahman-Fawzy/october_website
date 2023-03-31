@@ -13,6 +13,10 @@ import { UniversitiesComponent } from './universities/universities.component';
 import { PaginationComponent } from './shared/pagination/pagination.component';
 import { StudyMajorsComponent } from './study-majors/study-majors.component';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
+import { CollapseModule } from 'ngx-bootstrap/collapse';
+import { UniversityDetailsComponent } from './universities/university-details/university-details.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { RegisterModalComponent } from './shared/register-modal/register-modal.component';
 
 
 @NgModule({
@@ -23,7 +27,9 @@ import { AccordionModule } from 'ngx-bootstrap/accordion';
     HomeComponent,
     UniversitiesComponent,
     PaginationComponent,
-    StudyMajorsComponent
+    StudyMajorsComponent,
+    UniversityDetailsComponent,
+    RegisterModalComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +37,9 @@ import { AccordionModule } from 'ngx-bootstrap/accordion';
     AppRoutingModule,
     FontAwesomeModule,
     BsDropdownModule,
-    AccordionModule
+    AccordionModule,
+    CollapseModule,
+    ModalModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

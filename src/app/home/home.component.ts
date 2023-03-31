@@ -1,4 +1,6 @@
+import { RegisterModalComponent } from './../shared/register-modal/register-modal.component';
 import { Component } from '@angular/core';
+import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 
 @Component({
   selector: 'app-home',
@@ -6,6 +8,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
+  modalRef?: BsModalRef;
+
+  constructor(private modalService: BsModalService) {}
 
   filterUniversity(university: string, event: any) {
     let universities = document.getElementsByClassName('filterCard')
@@ -21,6 +26,10 @@ export class HomeComponent {
       buttons[i].classList.remove('active')
       event.target.classList.add('active')
     }
+  }
+
+  register() {
+    this.modalRef = this.modalService.show(RegisterModalComponent, {class: 'modal-xl modal-dialog-centered'});
   }
 
 }

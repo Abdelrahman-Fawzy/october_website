@@ -1,0 +1,115 @@
+<div class="modal-header">
+  <h4 class="modal-title">سجل معنا</h4>
+  <button type="button" data-bs-dismiss="modal" class="btn-close close" aria-label="Close" (click)="closeModal()">
+    <span aria-hidden="true" class="visually-hidden">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <form *ngIf="!isSubmited">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="form-group">
+          <label for="name">الاسم</label>
+          <input id="name" type="text" class="form-control" placeholder="الاسم">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group">
+          <label for="email">البريد الالكترونى</label>
+          <input id="email" type="email" class="form-control" placeholder="البريد الالكترونى">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group">
+          <label for="name">رقم الهاتف</label>
+          <div class="phone">
+            <div class="form-group">
+              <select id="phoneCountry">
+                <option>1</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <input type="text" id="name" placeholder="phone">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group">
+          <label for="country">الدولة</label>
+          <select name="" class="form-control" id="country">
+            <option>الدولة</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group">
+          <label for="certificateType">نوع الشهادة</label>
+          <select name="" class="form-control" id="certificateType">
+            <option>اخري</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group">
+          <label for="certificate">نوع الشهادة</label>
+          <input id="certificate" type="text" class="form-control" placeholder="نوع الشهادة">
+        </div>
+      </div>
+    </div>
+    <div class="files-upload">
+      <div class="required-documents">
+        <span>المرفقات المطلوبة</span>
+        <ul class="list-unstyled">
+          <li>
+            <span class="doc-name">- صوره شخصيه</span>
+            <span class="doc-status">
+              <img src="assets/images/icons/confirmed.png" alt="">
+            </span>
+          </li>
+          <li>
+            <span class="doc-name">- المؤهل</span>
+            <span class="doc-status">
+              <img src="assets/images/icons/confirmed.png" alt="">
+            </span>
+          </li>
+          <li>
+            <span class="doc-name">- جواز سفر ساري</span>
+            <span class="doc-status">
+              <img src="assets/images/icons/pending.png" alt="">
+            </span>
+          </li>
+        </ul>
+        <div class="uploaded-files">
+          <ul class="list-unstyled">
+            <li>
+              <span class="file-name" id="file-chosen">{{fileName ? fileName : 'file name'}}</span>
+              <span class="file-size">
+                2 mb
+                <img src="assets/images/icons/close.png" alt="">
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="attchmentsArea">
+        <div class="attachments">
+          <img src="assets/images/icons/Folder.png" alt="folder">
+          <div class="hints">
+            <p>اسحب الملفات هنا لبدا التحميل</p>
+            <p>أو</p>
+          </div>
+          <div class="upload">
+            <input (change)="fileSelected($event)" id="uploadBtn" type="file" name="cat_img" hidden>
+            <label for="uploadBtn">ارفاق من جهازك</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="primary send" (click)="isSubmited = true">ارسل الطلب</button>
+  </form>
+  <div class="confirmed" *ngIf="isSubmited">
+    <img src="assets/images/icons/confirmed.gif" alt="">
+    <p>تم تسجيل طلبك بنجاح</p>
+  </div>
+</div>
