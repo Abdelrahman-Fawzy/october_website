@@ -1,0 +1,111 @@
+@import "../../abstracts/variables", "../../abstracts/mixins";
+.about-us, .offers {
+  margin-bottom: 1em;
+  .breif {
+    margin: 0 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    & > span {
+      font-size: 23px;
+      font-weight: 600;
+      display: block;
+      margin-bottom: 15px;
+    }
+    ul {
+      padding: 0;
+      li {
+        font-size: 18px;
+        margin-bottom: 1em;
+        span {
+          color: $orange;
+        }
+      }
+    }
+  }
+  .img {
+    width: 600px;
+    height: 400px;
+    margin: auto;
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 28px;
+    }
+  }
+}
+.inquiries {
+  background-image: url('/assets/images/shapes/Shape.png');
+  background-size: 100% 100%;
+  margin-top: 2em;
+  padding: 5em 0;
+  .container {
+    margin-top: 5em;
+    margin-bottom: 5em;
+  }
+  .inqu {
+    h3 {
+      color: #363636;
+      font-weight: 600;
+    }
+    span {
+      color: $purple;
+      display: block;
+      font-size: 40px;
+    }
+    ul {
+      padding: 0;
+      list-style-image: url('/assets/images/icons/checkmark.png');
+      margin: 2em 0;
+      li {
+        margin-bottom: 1em;
+      }
+    }
+  }
+  .getInquiry {
+    padding: 35px;
+    border-radius: 21px;
+    box-shadow: 0 3px 60px rgb(0 0 0 / 16%);
+    background-color: $white;
+    position: relative;
+    h3 {
+      font-weight: 600;
+      span {
+        color: $orange;
+      }
+    }
+    p {
+      color: #727272;
+      margin: 1em 0;
+      line-height: 25px;
+    }
+    form {
+      .phone {
+        padding: 0.17rem 0.75rem;
+        display: flex;
+        align-items: center;
+        border: 1px solid $orange;
+        border-radius: 0.25rem;
+        justify-content: space-between;
+        .form-group {
+          margin-bottom: 0;
+          select, input {
+            border: none;
+          }
+          input { width: 100%; }
+        }
+      }
+      .inquiry {
+        display: flex;
+        justify-content: space-between;
+        span.hint { color:  $orange; }
+      }
+      textarea { resize: none; }
+      button.primary {
+        display: block;
+        margin: auto;
+      }
+    }
+    img.loaf {z-index: 0;}
+  }
+}

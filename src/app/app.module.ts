@@ -17,6 +17,8 @@ import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { UniversityDetailsComponent } from './universities/university-details/university-details.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { RegisterModalComponent } from './shared/register-modal/register-modal.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 
 @NgModule({
@@ -29,7 +31,9 @@ import { RegisterModalComponent } from './shared/register-modal/register-modal.c
     PaginationComponent,
     StudyMajorsComponent,
     UniversityDetailsComponent,
-    RegisterModalComponent
+    RegisterModalComponent,
+    AboutUsComponent,
+    ContactUsComponent
   ],
   imports: [
     BrowserModule,

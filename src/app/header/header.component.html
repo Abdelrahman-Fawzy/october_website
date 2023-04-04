@@ -63,10 +63,10 @@
           <a class="nav-link" href="#">المعاهد الفنية</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">من نحن</a>
+          <a class="nav-link" [routerLink]="'/about-us'" [routerLinkActive]="'active'"  [routerLinkActiveOptions]="{exact: true}">من نحن</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">تواصل معنا</a>
+          <a class="nav-link" [routerLink]="'/contact-us'" [routerLinkActive]="'active'"  [routerLinkActiveOptions]="{exact: true}">تواصل معنا</a>
         </li>
       </ul>
       <div class="actions">
