@@ -1,0 +1,78 @@
+<div class="inquiries">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <div class="inqu">
+          <h3>هل لديك الاستفسارات ؟</h3>
+          <span>لدينا الاجابات</span>
+          <ul class="list-unstyled">
+            <li>كيف يمكنني بدء الدراسة في تركيا</li>
+            <li>متطلبات الدراسة في تركيا</li>
+            <li>متوسط تكاليف المعيشة في تركيا</li>
+            <li>اختبار اليوس التركي</li>
+            <li>معادلة الشهادة</li>
+            <li>الجامعات المعتمدة</li>
+          </ul>
+          <button class="primary">مركز المعلومات</button>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="getInquiry">
+          <h3>احصل على استشارة <span>مجانية %100</span></h3>
+          <p>لدى فريقنا الخبرة للإجابة على كافة استفساراتكم حول الدراسة و الإقامة  في تركيا و توفير المعلومات حسب احتياجكم</p>
+          <form [formGroup]="InquiryForm" (ngSubmit)="Inquiry()">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label for="name">الاسم</label>
+                  <input [(ngModel)]="inquiry.social_customer_name" formControlName="customerName" type="text" class="form-control" id="name" placeholder="اكتب اسمك هنا ...">
+                  <div *ngIf="f.customerName.touched && f.customerName.invalid">
+                    <div class="text-danger" *ngIf="f.customerName.errors.required">Name is required.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="name">رقم الهاتف</label>
+                  <div class="phone">
+                    <!-- <div class="form-group">
+                      <select id="phoneCountry">
+                        <option>1</option>
+                      </select>
+                    </div> -->
+                    <div class="form-group">
+                      <input [(ngModel)]="inquiry.social_phone_numbers" formControlName="phone" type="text" id="name" placeholder="phone">
+                    </div>
+                  </div>
+                  <div *ngIf="f.phone.touched && f.phone.invalid">
+                    <div class="text-danger" *ngIf="f.phone.errors.required">Phone is required.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="email">البريد الالكترونى (Email)</label>
+                  <input [(ngModel)]="inquiry.social_email" formControlName="email" type="email" class="form-control" id="email" placeholder="name@example.com">
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label class="inquiry" for="inquiry">
+                    <span>استفسارك</span>
+                    <span class="hint">بحد ادنى 30 حرف</span>
+                  </label>
+                  <textarea [(ngModel)]="inquiry.social_notes" formControlName="inquiry" class="form-control" id="inquiry" rows="4"></textarea>
+                  <div *ngIf="f.inquiry.touched && f.inquiry.invalid">
+                    <div class="text-danger" *ngIf="f.inquiry.errors.required">inquiry is required.</div>
+                  </div>
+                </div>
+              </div>
+              <button class="primary" type="submit">أرسل طلبك</button>
+            </div>
+          </form>
+          <img class="loaf topLoaf" src="assets/images/main_assets/loaf.png" alt="loaf">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

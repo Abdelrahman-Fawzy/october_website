@@ -6,62 +6,19 @@
           <h1>الوكيل المعتمد  <br>
             لأكثر من 45 جامعة في تركيا</h1>
           <div class="actions">
-            <button class="primary">عرض المزيد</button>
-            <button class="primary-outline">احجز مقعدك الان</button>
+            <button class="primary">احجز مقعدك الان</button>
           </div>
         </div>
       </div>
       <div class="col-md-6">
-        <img src="/assets/images/shapes/penciles.png" alt="">
-      </div>
-    </div>
-  </div>
-</div>
-<div class="container">
-  <div class="filter_data">
-    <div class="row">
-      <div class="col-md-3">
-        <div class="form-group">
-          <label for="studyLevel">المرحلة الدراسية</label>
-          <select class="form-control" id="studyLevel">
-            <option>بكالوريوس</option>
-            <option>test</option>
-          </select>
+        <div class="tree">
+          <img src="assets/images/about/tree.png" alt="tree">
         </div>
-      </div>
-      <div class="col-md-3">
-        <div class="form-group">
-          <label for="specialization">التخصص</label>
-          <select class="form-control" id="specialization">
-            <option>طب الفم و الأسنان</option>
-            <option>test</option>
-          </select>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="form-group">
-          <label for="studyLanguage">اللغة الدراسية</label>
-          <select class="form-control" id="studyLanguage">
-            <option>English</option>
-            <option>Arabic</option>
-          </select>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="form-group">
-          <label for="expenses">المصروفات الدراسية</label>
-          <select class="form-control" id="expenses">
-            <option>6000 - 10000</option>
-            <option>test</option>
-          </select>
+        <div class="logo">
+          <img src="assets/images/main_assets/logo.png" alt="logo">
         </div>
       </div>
     </div>
-    <button class="primary">
-      <img src="assets/images/icons/flatSearchIcon.png" alt="search">
-      بحث
-    </button>
-    <img class="loaf" src="assets/images/main_assets/loaf.png" alt="loaf">
   </div>
 </div>
 <div class="container">
@@ -137,75 +94,7 @@
     <img class="loaf" src="assets/images/main_assets/loaf.png" alt="loaf">
   </div>
 </div>
-<div class="inquiries">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-md-6">
-        <div class="inqu">
-          <h3>هل لديك الاستفسارات ؟</h3>
-          <span>لدينا الاجابات</span>
-          <ul class="list-unstyled">
-            <li>كيف يمكنني بدء الدراسة في تركيا</li>
-            <li>متطلبات الدراسة في تركيا</li>
-            <li>متوسط تكاليف المعيشة في تركيا</li>
-            <li>اختبار اليوس التركي</li>
-            <li>معادلة الشهادة</li>
-            <li>الجامعات المعتمدة</li>
-          </ul>
-          <button class="primary">مركز المعلومات</button>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="getInquiry">
-          <h3>احصل على استشارة <span>مجانية %100</span></h3>
-          <p>لدى فريقنا الخبرة للإجابة على كافة استفساراتكم حول الدراسة و الإقامة  في تركيا و توفير المعلومات حسب احتياجكم</p>
-          <form>
-            <div class="row">
-              <div class="col-md-12">
-                <div class="form-group">
-                  <label for="name">الاسم</label>
-                  <input type="text" class="form-control" id="name" placeholder="اكتب اسمك هنا ...">
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label for="name">رقم الهاتف</label>
-                  <div class="phone">
-                    <div class="form-group">
-                      <select id="phoneCountry">
-                        <option>1</option>
-                      </select>
-                    </div>
-                    <div class="form-group">
-                      <input type="text" id="name" placeholder="phone">
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label for="email">البريد الالكترونى (Email)</label>
-                  <input type="email" class="form-control" id="email" placeholder="name@example.com">
-                </div>
-              </div>
-              <div class="col-md-12">
-                <div class="form-group">
-                  <label class="inquiry" for="inquiry">
-                    <span>استفسارك</span>
-                    <span class="hint">بحد ادنى 30 حرف</span>
-                  </label>
-                  <textarea class="form-control" id="inquiry" rows="4"></textarea>
-                </div>
-              </div>
-              <button class="primary">أرسل طلبك</button>
-            </div>
-          </form>
-          <img class="loaf topLoaf" src="assets/images/main_assets/loaf.png" alt="loaf">
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<app-inquiries></app-inquiries>
 <div class="study_fans">
   <div class="row align-items-center">
     <div class="col-md-6">
@@ -222,7 +111,7 @@
           <li>نرسم مستقبلك الأكاديمي وندعمك حتى الاستقرار</li>
         </ul>
         <span>تواصل معنا الآن واحصل على استشارتك المجانية</span>
-        <button class="primary">تواصل معنا</button>
+        <button class="primary" [routerLink]="'/contact-us'">تواصل معنا</button>
       </div>
     </div>
   </div>
@@ -231,7 +120,7 @@
   <div class="container">
     <div class="title">
       <h2>اهم التخصصات</h2>
-      <a href="">عرض الجميع</a>
+      <a [routerLink]="'/study-majors'">عرض الجميع</a>
     </div>
     <div class="row">
       <div class="col-md-4">
@@ -367,7 +256,7 @@
         </div>
       </div>
     </div>
-    <button class="primary">
+    <button class="primary" [routerLink]="'/study-majors'">
       عرض كل التخصصات
     </button>
   </div>
@@ -384,9 +273,14 @@
     <div class="row">
       <div class="col-md-4 filterCard filter1 show">
         <div class="card">
-          <img src="assets/images/universities/Bora Bora.png" class="card-img-top" alt="article">
+          <div class="card-img" style="background-image: url('assets/images/universities/Bora Bora.png');">
+            <div class="shape">
+              <img src="assets/images/main_assets/univ-logo.png" alt="">
+            </div>
+            <!-- <img src="assets/images/universities/Bora Bora.png" class="card-img-top" alt="article"> -->
+          </div>
           <div class="card-body">
-            <h3 class="university-name">جامعة اسطنبول</h3>
+            <h3 class="university-name" [routerLink]="'/universities/1'">جامعة اسطنبول</h3>
             <p class="university-description">نوع الجامعة : خاصة - المدينة : اسطنبول</p>
             <div class="information">
               <div class="price-info">
@@ -414,7 +308,11 @@
       </div>
       <div class="col-md-4 filterCard filter3 show">
         <div class="card">
-          <img src="assets/images/universities/New Zealand.png" class="card-img-top" alt="article">
+          <div class="card-img" style="background-image: url('assets/images/universities/New Zealand.png');">
+            <div class="shape">
+              <img src="assets/images/main_assets/univ-logo.png" alt="">
+            </div>
+          </div>
           <div class="card-body">
             <h3 class="university-name">جامعة استينيا</h3>
             <p class="university-description">نوع الجامعة : خاصة - المدينة : اسطنبول</p>
@@ -444,7 +342,11 @@
       </div>
       <div class="col-md-4 filterCard filter2 show">
         <div class="card">
-          <img src="assets/images/universities/Paris.png" class="card-img-top" alt="article">
+          <div class="card-img" style="background-image: url('assets/images/universities/Paris.png');">
+            <div class="shape">
+              <img src="assets/images/main_assets/univ-logo.png" alt="">
+            </div>
+          </div>
           <div class="card-body">
             <h3 class="university-name">جامعة اسطنبول ميديبول</h3>
             <p class="university-description">نوع الجامعة : خاصة - المدينة : اسطنبول</p>
@@ -474,7 +376,11 @@
       </div>
       <div class="col-md-4 filterCard filter1 show">
         <div class="card">
-          <img src="assets/images/universities/Singapore.png" class="card-img-top" alt="article">
+          <div class="card-img" style="background-image: url('assets/images/universities/Singapore.png');">
+            <div class="shape">
+              <img src="assets/images/main_assets/univ-logo.png" alt="">
+            </div>
+          </div>
           <div class="card-body">
             <h3 class="university-name">جامعة ألتن باش</h3>
             <p class="university-description">نوع الجامعة : خاصة - المدينة : اسطنبول</p>
@@ -504,7 +410,11 @@
       </div>
       <div class="col-md-4 filterCard filter2 show">
         <div class="card">
-          <img src="assets/images/universities/Thailand.png" class="card-img-top" alt="article">
+          <div class="card-img" style="background-image: url('assets/images/universities/Thailand.png');">
+            <div class="shape">
+              <img src="assets/images/main_assets/univ-logo.png" alt="">
+            </div>
+          </div>
           <div class="card-body">
             <h3 class="university-name">جامعة بهتشه شهير</h3>
             <p class="university-description">نوع الجامعة : خاصة - المدينة : اسطنبول</p>
@@ -534,7 +444,11 @@
       </div>
       <div class="col-md-4 filterCard filter3 show">
         <div class="card">
-          <img src="assets/images/universities/Bora Bora.png" class="card-img-top" alt="article">
+          <div class="card-img" style="background-image: url('assets/images/universities/Bora Bora.png');">
+            <div class="shape">
+              <img src="assets/images/main_assets/univ-logo.png" alt="">
+            </div>
+          </div>
           <div class="card-body">
             <h3 class="university-name">جامعة أوكان</h3>
             <p class="university-description">نوع الجامعة : خاصة - المدينة : اسطنبول</p>

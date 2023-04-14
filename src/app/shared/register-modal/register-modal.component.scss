@@ -1,11 +1,15 @@
 @import "../../../abstracts/variables", "../../../abstracts/mixins";
 .phone {
-  padding: 0.17rem 0.75rem;
   display: flex;
   align-items: center;
   border: 1px solid $orange;
-  border-radius: 0.25rem;
+  border-radius: 10px;
   gap: 10px;
+  height: calc(2em + 0.7rem + 2px) !important;
+  padding: 0.5rem 0.75rem !important;
+  font-size: 15px !important;
+  outline: none !important;
+  box-shadow: none !important;
   .form-group {
     margin-bottom: 0;
     select, input {
@@ -61,6 +65,10 @@
   }
   .attchmentsArea {
     flex: 3;
+    .uploads {
+      width: 100%;
+      justify-content: space-evenly;
+    }
   }
 }
 button.send {

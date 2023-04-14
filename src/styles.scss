@@ -28,18 +28,20 @@ body::-webkit-scrollbar-thumb {
 
 .form-control {
   border-color: $orange !important;
-  border-radius: $borderRadius - 11;
-  height: calc(2em + 0.7rem + 2px);
-  padding: 0.5rem .75rem;
+  border-radius: $borderRadius - 11  !important;
+  height: calc(2em + 0.7rem + 2px) !important;
+  padding: 0.5rem .75rem !important;
   font-size: $fontSize - 1 !important;
-  color: $greyVtwo !important;
-  outline: none;
+  outline: none !important;
+  box-shadow: none !important;
   &::placeholder {color: $greyVtwo !important;}
   &:focus {
     outline: none;
     box-shadow: none;
   }
 }
+input {outline: none; }
+input::placeholder {color: $greyVtwo !important;}
 button.primary {
   @include buttons($orange, $orange, $white, $fontSize , $orange, $white);
 }
@@ -307,6 +309,33 @@ aside.aside-filter {
     img{
       width: 65px;
     }
+  }
+}
+.card {
+  border: none !important;
+  background: transparent !important;
+  width: 100% !important;
+  .card-img {
+    height: 250px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    img { height: 100%; }
+  }
+}
+.shape {
+  background-image: url('/assets/images/shapes/universityShape.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  width: 45%;
+  display: flex;
+  align-items: center;
+  img {
+    width: 120px;
+    height: 100px !important;
+    margin: 0 15px;
   }
 }
 

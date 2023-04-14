@@ -12,17 +12,11 @@
     <div class="row">
       <div class="col-md-3">
         <div class="logo">
-          <img src="/assets/images/main_assets/logo.png" alt="logo">
+          <img src="/assets/images/main_assets/footer-logo.png" alt="logo">
         </div>
         <ul class="list-unstyled social_links">
           <li>
             <fa-icon [icon]="faFacebook"></fa-icon>
-          </li>
-          <li>
-            <fa-icon [icon]="faGooglePlus"></fa-icon>
-          </li>
-          <li>
-            <fa-icon [icon]="faTwitter"></fa-icon>
           </li>
           <li>
             <fa-icon [icon]="faInstagram"></fa-icon>
@@ -57,14 +51,6 @@
               <a href="">التخصصات الدراسية</a>
             </li>
             <li>
-              <a href="">كن وكيلنا</a>
-            </li>
-          </ul>
-          <ul class="list-unstyled">
-            <li>
-              <a href="">الفعاليات</a>
-            </li>
-            <li>
               <a href="">سياسة ملفات الارتباط</a>
             </li>
           </ul>
@@ -72,8 +58,7 @@
       </div>
       <div class="col-md-4">
         <div class="actions">
-          <button class="primary-outline">ابحث عن جامعتك</button>
-          <button class="primary">سجل الان</button>
+          <button class="primary" (click)="register()">سجل الان</button>
         </div>
         <ul class="list-unstyled contacts">
           <li>
@@ -101,7 +86,7 @@
 <div class="copyRight">
   <div class="container d-flex justify-content-between">
     <span>
-      Made Theme By <a href="">Deercreative</a>
+      StudyPro
     </span>
     <span>
       &copy; copyRight 2019 All Right reserved

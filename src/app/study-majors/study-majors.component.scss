@@ -1,6 +1,6 @@
 aside.aside-filter {
   position: fixed;
-  z-index: 9;
+  // z-index: 9;
   width: 350px;
   height: 75vh;
   background: #fff;
@@ -12,6 +12,7 @@ aside.aside-filter {
   width: calc(100% - 350px);
   margin-right: 350px;
   padding: 2em;
+  padding-top: 0;
   .major {
     padding: 2em;
     background: #fff;
@@ -39,6 +40,7 @@ aside.aside-filter {
       .card {
         margin-bottom: 2em;
         .card-body {
+          text-align: center;
           .major-name {
             font-weight: bold;
             font-size: 25px;
@@ -67,4 +69,17 @@ aside.aside-filter {
   font-weight: bold;
   margin-bottom: 1em;
   display: block;
+}
+
+.card {
+  .card-img {
+    height: auto;
+    background: #F8F8F8;
+    padding: 25px;
+    border-radius: 10px;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
 }

@@ -1,16 +1,24 @@
 import { RegisterModalComponent } from './../shared/register-modal/register-modal.component';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
+import { Inquiry } from '../models/inquiry';
+import { InquiriesService } from '../services/inquiries.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
   modalRef?: BsModalRef;
 
-  constructor(private modalService: BsModalService) {}
+  constructor(private modalService: BsModalService,
+    private Inquiries: InquiriesService,
+    private toastr: ToastrService) {}
+
+  ngOnInit(): void {
+  }
 
   filterUniversity(university: string, event: any) {
     let universities = document.getElementsByClassName('filterCard')

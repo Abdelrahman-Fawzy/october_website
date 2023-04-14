@@ -19,6 +19,10 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 import { RegisterModalComponent } from './shared/register-modal/register-modal.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ToastrModule } from 'ngx-toastr';
+import { InquiriesComponent } from './shared/inquiries/inquiries.component';
 
 
 @NgModule({
@@ -33,7 +37,8 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     UniversityDetailsComponent,
     RegisterModalComponent,
     AboutUsComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    InquiriesComponent
   ],
   imports: [
     BrowserModule,
@@ -43,6 +48,12 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     BsDropdownModule,
     AccordionModule,
     CollapseModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+    ToastrModule.forRoot({
+      positionClass: 'toast-bottom-right'
+    }),
     ModalModule.forRoot()
   ],
   providers: [],

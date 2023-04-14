@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
+import { Inquiry } from '../models/inquiry';
+import { InquiriesService } from '../services/inquiries.service';
 
 @Component({
   selector: 'app-about-us',
@@ -7,4 +10,7 @@ import { Component } from '@angular/core';
 })
 export class AboutUsComponent {
 
+  constructor() {
+
+  }
 }

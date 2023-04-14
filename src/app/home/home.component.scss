@@ -1,9 +1,30 @@
 @import "../../abstracts/variables", "../../abstracts/mixins";
 
 .welcoming {
-  img {
-    width: 120%;
+  .tree {
+    display: flex;
+    img {
+      width: 80%;
+      margin: auto;
+    }
   }
+  .logo {
+    background: #fff;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 16%);
+    border-radius: 27px;
+    padding: 20px;
+    width: 28%;
+    margin: auto;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    img {
+      width: 100%;
+    }
+  }
+  // img {
+  //   width: 120%;
+  // }
   .words {
     margin-top: 7em;
     h1 {
@@ -104,81 +125,6 @@
       color: $purple;
       font-weight: 600;
     }
-  }
-}
-.inquiries {
-  background-image: url('/assets/images/shapes/Shape.png');
-  background-size: 100% 100%;
-  margin-top: 2em;
-  padding: 5em 0;
-  .container {
-    margin-top: 5em;
-    margin-bottom: 5em;
-  }
-  .inqu {
-    h3 {
-      color: #363636;
-      font-weight: 600;
-    }
-    span {
-      color: $purple;
-      display: block;
-      font-size: 40px;
-    }
-    ul {
-      padding: 0;
-      list-style-image: url('/assets/images/icons/checkmark.png');
-      margin: 2em 0;
-      li {
-        margin-bottom: 1em;
-      }
-    }
-  }
-  .getInquiry {
-    padding: 35px;
-    border-radius: 21px;
-    box-shadow: 0 3px 60px rgb(0 0 0 / 16%);
-    background-color: $white;
-    position: relative;
-    h3 {
-      font-weight: 600;
-      span {
-        color: $orange;
-      }
-    }
-    p {
-      color: #727272;
-      margin: 1em 0;
-      line-height: 25px;
-    }
-    form {
-      .phone {
-        padding: 0.17rem 0.75rem;
-        display: flex;
-        align-items: center;
-        border: 1px solid $orange;
-        border-radius: 0.25rem;
-        justify-content: space-between;
-        .form-group {
-          margin-bottom: 0;
-          select, input {
-            border: none;
-          }
-          input { width: 100%; }
-        }
-      }
-      .inquiry {
-        display: flex;
-        justify-content: space-between;
-        span.hint { color:  $orange; }
-      }
-      textarea { resize: none; }
-      button.primary {
-        display: block;
-        margin: auto;
-      }
-    }
-    img.loaf {z-index: 0;}
   }
 }
 .study_fans {
