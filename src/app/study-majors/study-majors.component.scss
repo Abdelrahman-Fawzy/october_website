@@ -1,18 +1,33 @@
 aside.aside-filter {
   position: fixed;
   // z-index: 9;
-  width: 350px;
   height: 75vh;
   background: #fff;
   padding: 20px 30px;
   overflow-y: scroll;
   .search { margin-bottom: 1em; }
 }
+aside#modalMajorsAside {
+  position: relative;
+  width: auto;
+  height: 100vh;
+}
 .majors-section {
-  width: calc(100% - 350px);
-  margin-right: 350px;
   padding: 2em;
   padding-top: 0;
+  position: relative;
+  .openFilteration {
+    background: #ddd;
+    color: #444;
+    border: none;
+    border-radius: 17px;
+    font-weight: bold;
+    position: fixed;
+    left: 40%;
+    margin-top: 1em;
+    z-index: 2;
+    padding: 5px 15px;
+  }
   .major {
     padding: 2em;
     background: #fff;
@@ -81,5 +96,25 @@ aside.aside-filter {
       width: 100%;
       height: auto;
     }
+  }
+}
+.modal-body {
+  padding: 0;
+}
+
+@media (min-width: 1200px) {
+  .majors-section {
+    width: calc(100% - 350px);
+    margin-right: 320px;
+  }
+}
+
+@media ( min-width: 992px ) and ( max-width: 1199px ) {
+  aside.aside-filter {
+    width: 300px;
+  }
+  .majors-section {
+    width: calc(100% - 300px);
+    margin-right: 300px;
   }
 }

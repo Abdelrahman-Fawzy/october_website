@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, TemplateRef } from '@angular/core';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { RegisterModalComponent } from '../shared/register-modal/register-modal.component';
 
@@ -9,6 +9,11 @@ import { RegisterModalComponent } from '../shared/register-modal/register-modal.
 })
 export class StudyMajorsComponent {
   modalRef?: BsModalRef;
+
+  config = {
+    animated: true,
+    class: 'modal-sm filteration'
+  };
 
   constructor(private modalService: BsModalService) {}
 
@@ -25,11 +30,15 @@ export class StudyMajorsComponent {
     if (bodyHeight >= 1500) {
       majorsAside.style.position = 'relative'
       majorsAside.style.height = 'auto'
-      majorsSections.style.marginRight = '0px'
+      // majorsSections.style.marginRight = '0px'
     } else {
       majorsAside.style.position = 'fixed'
       majorsAside.style.height = '75vh'
-      majorsSections.style.marginRight = '350px'
+      // majorsSections.style.marginRight = '350px'
     }
+  }
+
+  openModal(template: TemplateRef<any>) {
+    this.modalRef = this.modalService.show(template, this.config);
   }
 }

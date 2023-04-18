@@ -16,7 +16,9 @@
     }
     .social {
       display: flex;
+      flex-wrap: wrap;
       gap: 15px;
+      margin-bottom: 2em;
       .link-box {
         background: #fff;
         border: 1px solid #707070;
@@ -155,5 +157,27 @@
       }
     }
     img.loaf {z-index: 0;}
+  }
+}
+@media(min-width: 768px) and (max-width: 991px) {
+  .tree {
+    img { width: 100%; }
+  }
+}
+
+@media (max-width: 767px) {
+  .tree {
+    margin-top: 3em;
+  }
+}
+
+@media (max-width: 575px) {
+  .social {
+    justify-content: center;
+  }
+  .tree {
+    img {
+      width: 70%;
+    }
   }
 }

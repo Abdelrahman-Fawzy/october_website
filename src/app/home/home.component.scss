@@ -51,16 +51,13 @@
   }
 }
 .features {
-  display: flex;
-  justify-content: space-between;
   margin: 4em 0;
-  gap: 7em;
   .feature {
     background: #fff;
     padding: 25px 10px;
     border-radius: 25px;
-    width: calc(100% / 3);
     text-align: center;
+    margin-bottom: 2em;
     & > img {
       width: 80px;
       height: 80px;
@@ -89,7 +86,6 @@
 .information {
   overflow: hidden;
   .info {
-    margin: 6em 13em 0 0;
     h2 {
       font-weight: 600;
       letter-spacing: 2px;
@@ -107,10 +103,9 @@
   padding: 20px;
   border-radius: 21px;
   position: relative;
-  width: 85%;
-  margin: -220px auto 0;
   .stats {
     text-align: center;
+    margin-bottom: 1em;
     img {
       width: 75px;
       height: 75px;
@@ -129,6 +124,7 @@
 }
 .study_fans {
   overflow: hidden;
+  margin: 2em 0;
   img.shape {width: 90%}
   .adventures {
     h3 {
@@ -232,10 +228,11 @@
   .filteration-buttons {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     margin: 2em auto;
     gap: 10px;
     border-bottom: 1px solid #A7A7A7;
-    width: 60%;
+    width: 65%;
     button.filterBtn {
       background: transparent;
       border: none;
@@ -399,5 +396,138 @@
       border-top: 1px solid #EFF0F0;
       color: #7B8591;
     }
+  }
+}
+
+@media (min-width: 1200px) {
+  .statistics {
+    margin: -220px auto 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .information {
+    .info {
+      margin: 6em 13em 0 0;
+    }
+  }
+  .statistics {
+    width: 85%;
+  }
+}
+
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .statistics {
+    margin: -60px auto 0;
+  }
+  .best_universities {
+    .filteration-buttons {
+      width: 70%;
+      gap: 0px;
+      button.filterBtn {
+        font-size: $fontSize;
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .information {
+    margin-bottom: 2em;
+    .info {
+      text-align: center;
+      p {
+        margin: 2em auto;
+        width: 70%;
+      }
+    }
+  }
+  .study_fans {
+    .adventures {
+      margin: 0 4em;
+    }
+  }
+  .best_universities {
+    .filteration-buttons {
+      button.filterBtn {
+        font-size: $fontSize;
+      }
+    }
+  }
+}
+
+@media(min-width: 768px) and (max-width: 991px) {
+  .welcoming {
+    .words {
+      h1 {
+        font-size: 2rem;
+      }
+    }
+    .tree {
+      img { width: 100%; }
+    }
+    .logo {
+      width: 30%;
+      height: 100px;
+    }
+  }
+  .best_universities {
+    .filteration-buttons {
+      width: 80%;
+      button.filterBtn {
+        font-size: $fontSize - 2;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .welcoming {
+    .words {
+      margin-top: 2em;
+    }
+    .tree {
+      margin-top: 3em;
+    }
+  }
+  .best_universities {
+    .filteration-buttons {
+      width: 85%;
+      justify-content: space-evenly;
+      button.filterBtn {
+        font-size: $fontSize - 2;
+      }
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .welcoming {
+    .words {
+      h1 {
+        font-size: 2rem;
+        text-align: center;
+      }
+      .actions {
+        justify-content: center;
+      }
+    }
+    .tree {
+      img {
+        width: 70%;
+      }
+    }
+  }
+  .features {
+    .feature {
+      margin: 0 20px 2em;
+    }
+  }
+  .statistics {
+    margin: 0 20px;
+  }
+  .important_specializations {
+    margin: 0 15px;
   }
 }

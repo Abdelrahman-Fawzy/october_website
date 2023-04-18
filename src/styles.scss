@@ -338,6 +338,16 @@ aside.aside-filter {
     margin: 0 15px;
   }
 }
+.modal-dialog.filteration {
+  position: fixed;
+  margin: 0;
+  border-radius: 0;
+  height: 100%;
+  .modal-content {
+    border-radius: 0 !important;
+    height: 100%;
+  }
+}
 
 /* Importing Bootstrap SCSS file. */
 @import "./node_modules/bootstrap/scss/bootstrap";

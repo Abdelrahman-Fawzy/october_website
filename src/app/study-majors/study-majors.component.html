@@ -1,5 +1,5 @@
-<div class="area d-flex">
-  <aside class="aside-filter" id="majorsAside">
+<div class="area">
+  <aside class="aside-filter d-none d-lg-block" id="majorsAside">
     <div class="search">
       <input class="form-control search-input"
         placeholder="ابحث بالجامعة">
@@ -144,6 +144,9 @@
   </aside>
 
   <div class="majors-section" id="majors-section">
+    <button type="button" class="d-block d-lg-none openFilteration" (click)="openModal(template)">
+      Filter
+    </button>
     <div class="major">
       <div class="major__header">
         <h6>النتائج 411 من 3654</h6>
@@ -162,7 +165,7 @@
       </div>
       <div class="major__body">
         <div class="row">
-          <div class="col-md-4" *ngFor="let item of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]">
+          <div class="col-lg-4 col-md-6 col-sm-12" *ngFor="let item of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]">
             <div class="card">
               <div class="card-img">
                 <img src="assets/images/2.png" alt="">
@@ -185,3 +188,151 @@
     </div>
   </div>
 </div>
+
+<ng-template #template>
+  <div class="modal-body">
+    <aside class="aside-filter" id="modalMajorsAside">
+      <div class="search">
+        <input class="form-control search-input"
+          placeholder="ابحث بالجامعة">
+      </div>
+      <accordion [isAnimated]="true">
+        <accordion-group [isOpen]="true">
+          <label class="checkbox_container">
+            <input type="checkbox" checked="checked">
+            <span class="checkmark"></span>
+            بكالوريوس
+          </label>
+          <label class="checkbox_container">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            ماجستير
+          </label>
+          <label class="checkbox_container">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            دكتوراه
+          </label>
+          <label class="checkbox_container">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            دبلومة عامين
+          </label>
+          <label class="checkbox_container">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            سنة تحضيرية للغة
+          </label>
+          <label class="checkbox_container">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            دكتوراه متكاملة
+          </label>
+        </accordion-group>
+
+        <accordion-group heading="التخصص" [isOpen]="true">
+          <div class="search">
+            <input class="form-control search-input"
+              placeholder="ابحث بالتخصص">
+          </div>
+          <label class="checkbox_container">
+            <input type="checkbox" checked="checked">
+            <span class="checkmark"></span>
+            المحاسبة و المراجعة
+          </label>
+          <label class="checkbox_container">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            المحاسبة و المالية
+          </label>
+          <label class="checkbox_container">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            الادارة المالية و المحاسبة
+          </label>
+          <a href="" class="showMore">عرض المزيد</a>
+        </accordion-group>
+
+        <accordion-group heading="مدة الدراسة" [isOpen]="true">
+          <label class="checkbox_container">
+            <input type="checkbox" checked="checked">
+            <span class="checkmark"></span>
+            0 - 1 أعوام
+          </label>
+          <label class="checkbox_container">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            1.5 - 2 أعوام
+          </label>
+          <label class="checkbox_container">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            3 - 4 أعوام
+          </label>
+          <label class="checkbox_container">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            5 - 7 أعوام
+          </label>
+        </accordion-group>
+
+        <accordion-group heading="لغة الدراسة" [isOpen]="true">
+          <label class="checkbox_container">
+            <input type="checkbox" checked="checked">
+            <span class="checkmark"></span>
+            English
+          </label>
+          <label class="checkbox_container">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            العربية
+          </label>
+          <label class="checkbox_container">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            الانجليزية 30%
+          </label>
+          <label class="checkbox_container">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            turkish
+          </label>
+          <a href="" class="showMore"></a>
+        </accordion-group>
+
+        <accordion-group heading="fees" [isOpen]="true">
+          <label class="checkbox_container">
+            <input type="checkbox" checked="checked">
+            <span class="checkmark"></span>
+            0$ - 2000$
+          </label>
+          <label class="checkbox_container">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            2000$ - 3000$
+          </label>
+          <label class="checkbox_container">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            3000$ - 6000$
+          </label>
+          <label class="checkbox_container">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            6000$ - 10000$
+          </label>
+          <label class="checkbox_container">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            10000$ - 20000$
+          </label>
+          <label class="checkbox_container">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            20000$ - 40000$
+          </label>
+        </accordion-group>
+      </accordion>
+    </aside>
+  </div>
+</ng-template>

@@ -8,7 +8,7 @@
   <form [formGroup]="myForm" (ngSubmit)="RegisterWithUs()">
     <ng-container *ngIf="!isSubmited">
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-lg-4 col-md-6">
           <div class="form-group">
             <label for="name">الاسم</label>
             <input [(ngModel)]="registerData.social_customer_name" formControlName="name" id="name" type="text" class="form-control" placeholder="اكتب اسمك هنا ...">
@@ -17,13 +17,13 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-lg-4 col-md-6">
           <div class="form-group">
             <label for="email">البريد الالكترونى</label>
             <input [(ngModel)]="registerData.social_email" formControlName="email" id="email" type="email" class="form-control" placeholder="name@example.com">
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-lg-4 col-md-6">
           <div class="form-group">
             <label for="country">الدولة</label>
             <select (change)="getCountryCode()" [(ngModel)]="registerData.social_country" formControlName="country" class="form-control" id="country">
@@ -34,7 +34,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-lg-4 col-md-6">
           <div class="form-group">
             <label for="phone">رقم الهاتف</label>
             <div class="phone">
@@ -53,7 +53,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-lg-4 col-md-6">
           <div class="form-group">
             <label for="certificateType">نوع الشهادة</label>
             <select [(ngModel)]="registerData.social_certificate_type" formControlName="certificateType" class="form-control" id="certificateType">
@@ -64,7 +64,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4" *ngIf="registerData.social_certificate_type == '5'">
+        <div class="col-lg-4 col-md-6" *ngIf="registerData.social_certificate_type == '5'">
           <div class="form-group">
             <label for="certificate">نوع الشهادة</label>
             <input [(ngModel)]="registerData.social_certificate_other" formControlName="certificateOther" id="certificate" type="text" class="form-control" placeholder="اكتب نوع الشهادة">
@@ -72,63 +72,69 @@
         </div>
       </div>
       <div class="files-upload">
-        <div class="required-documents">
-          <span>المرفقات المطلوبة</span>
-          <ul class="list-unstyled">
-            <li>
-              <span class="doc-name">- صوره شخصيه</span>
-              <span class="doc-status">
-                <img *ngIf="registerData.paper_personal_photo" src="assets/images/icons/confirmed.png" alt="">
-                <img *ngIf="!registerData.paper_personal_photo" src="assets/images/icons/pending.png" alt="">
-              </span>
-            </li>
-            <li>
-              <span class="doc-name">- المؤهل</span>
-              <span class="doc-status">
-                <img *ngIf="registerData.paper_qualification" src="assets/images/icons/confirmed.png" alt="">
-                <img *ngIf="!registerData.paper_qualification" src="assets/images/icons/pending.png" alt="">
-              </span>
-            </li>
-            <li>
-              <span class="doc-name">- جواز سفر ساري</span>
-              <span class="doc-status">
-                <img *ngIf="registerData.paper_passport" src="assets/images/icons/confirmed.png" alt="">
-                <img *ngIf="!registerData.paper_passport" src="assets/images/icons/pending.png" alt="">
-              </span>
-            </li>
-          </ul>
-          <div class="uploaded-files">
-            <ul class="list-unstyled">
-              <li *ngFor="let file of myFiles">
-                <span class="file-name" id="personalPhotoName">{{file.name}}</span>
-                <span class="file-size">
-                  {{ (file.size / 1000) > 1000 ? math.floor(file.size / 1000000) + 'Mb' : math.floor(file.size / 1000) + 'Kb' }}
-                  <img src="assets/images/icons/close.png" alt="">
-                </span>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="attchmentsArea">
-          <div class="attachments">
-            <img src="assets/images/icons/Folder.png" alt="folder">
-            <div class="hints">
-              <p>اسحب الملفات هنا لبدا التحميل</p>
-              <p>أو</p>
+        <div class="row">
+          <div class="col-lg-4 d-flex">
+            <div class="required-documents">
+              <span>المرفقات المطلوبة</span>
+              <ul class="list-unstyled">
+                <li>
+                  <span class="doc-name">- صوره شخصيه</span>
+                  <span class="doc-status">
+                    <img *ngIf="registerData.paper_personal_photo" src="assets/images/icons/confirmed.png" alt="">
+                    <img *ngIf="!registerData.paper_personal_photo" src="assets/images/icons/pending.png" alt="">
+                  </span>
+                </li>
+                <li>
+                  <span class="doc-name">- المؤهل</span>
+                  <span class="doc-status">
+                    <img *ngIf="registerData.paper_qualification" src="assets/images/icons/confirmed.png" alt="">
+                    <img *ngIf="!registerData.paper_qualification" src="assets/images/icons/pending.png" alt="">
+                  </span>
+                </li>
+                <li>
+                  <span class="doc-name">- جواز سفر ساري</span>
+                  <span class="doc-status">
+                    <img *ngIf="registerData.paper_passport" src="assets/images/icons/confirmed.png" alt="">
+                    <img *ngIf="!registerData.paper_passport" src="assets/images/icons/pending.png" alt="">
+                  </span>
+                </li>
+              </ul>
+              <div class="uploaded-files">
+                <ul class="list-unstyled">
+                  <li *ngFor="let file of myFiles">
+                    <span class="file-name" id="personalPhotoName">{{file.name}}</span>
+                    <span class="file-size">
+                      {{ (file.size / 1000) > 1000 ? math.floor(file.size / 1000000) + 'Mb' : math.floor(file.size / 1000) + 'Kb' }}
+                      <img src="assets/images/icons/close.png" alt="">
+                    </span>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div class="uploads d-flex">
-              <div class="upload">
-                <input (change)="handleFileInput($event)" id="personalPhoto" type="file" hidden>
-                <label for="personalPhoto">ارفاق صورة شخصية</label>
-              </div>
-              <div class="upload">
-                <!-- <input formControlName="qualifications" (change)="handleQualificationsInput($event)" id="qualifiaction" type="file" hidden> -->
-                <input (change)="handleFileInput($event)" id="qualifiaction" type="file" hidden>
-                <label for="qualifiaction">ارفاق مؤهلك</label>
-              </div>
-              <div class="upload">
-                <input (change)="handleFileInput($event)" id="passport" type="file" hidden>
-                <label for="passport">ارفاق جواز السفر</label>
+          </div>
+          <div class="col-lg-8">
+            <div class="attchmentsArea">
+              <div class="attachments">
+                <img src="assets/images/icons/Folder.png" alt="folder">
+                <div class="hints">
+                  <p>اسحب الملفات هنا لبدا التحميل</p>
+                  <p>أو</p>
+                </div>
+                <div class="uploads d-flex">
+                  <div class="upload">
+                    <input (change)="handleFileInput($event)" id="personalPhoto" type="file" hidden>
+                    <label for="personalPhoto">ارفاق صورة شخصية</label>
+                  </div>
+                  <div class="upload">
+                    <!-- <input formControlName="qualifications" (change)="handleQualificationsInput($event)" id="qualifiaction" type="file" hidden> -->
+                    <input (change)="handleFileInput($event)" id="qualifiaction" type="file" hidden>
+                    <label for="qualifiaction">ارفاق مؤهلك</label>
+                  </div>
+                  <div class="upload">
+                    <input (change)="handleFileInput($event)" id="passport" type="file" hidden>
+                    <label for="passport">ارفاق جواز السفر</label>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
