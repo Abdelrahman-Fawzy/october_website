@@ -530,4 +530,23 @@
   .important_specializations {
     margin: 0 15px;
   }
+  .price-info {
+    .price {
+      span:first-child {
+        font-size: 18px !important;
+      }
+      span:last-child {
+        font-size: 16px !important;
+      }
+    }
+  }
+  .global, .programs-count {
+    img {
+      width: 20px !important;
+      height: 20px !important;
+    }
+    span {
+      font-size: 14px;
+    }
+  }
 }

@@ -10,7 +10,7 @@
   }
   .mySlides {
     display: none;
-    width: 910px;
+    width: 100%;
     height: 360px;
     img {
       width: 100%;
@@ -28,9 +28,11 @@
     flex: 1;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: 25px;
+    width: 100%;
     .column {
-      width: 185px;
+      width: 100%;
       height: 70px;
       img {
         cursor: pointer;
@@ -83,6 +85,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     li {
       img {
         width: 25px;
@@ -103,6 +106,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     ul {
       padding: 0;
       margin: 0;
@@ -138,6 +142,7 @@
     background: #fff;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     border-bottom: 1px solid #ccc;
     button.tablinks {
       background: transparent;
@@ -198,6 +203,7 @@
       }
     }
   }
+  .information-details { flex-wrap: wrap;}
   .information-contents {
     #university_introduction {
       .university_content {
@@ -237,6 +243,7 @@
             }
             .information-details-list {
               display: flex;
+              flex-wrap: wrap;
               margin-top: 2em;
               gap: 3em;
               ul {
@@ -287,6 +294,7 @@
         }
         .study_content_tab {
           display: none;
+          flex-wrap: wrap;
           gap: 3em;
           .sections {
             background: #F6F6F6;
@@ -461,6 +469,7 @@
     box-shadow: 0 3px 60px rgb(0 0 0 / 16%);
     background-color: $white;
     position: relative;
+    margin-bottom: 2em;
     h3 {
       font-weight: 600;
       span {
@@ -544,6 +553,84 @@
           }
         }
       }
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  .university-gallery {
+    flex-wrap: wrap;
+    flex-direction: column;
+    .images {
+      flex-direction: row;
+    }
+  }
+}
+@media (max-width: 991px) {
+  .information-details {
+    flex-direction: column;
+  }
+  .study_tab {
+    width: 100% !important;
+  }
+  .study_content_tab {
+    flex-direction: column;
+  }
+}
+@media (max-width: 767px) {
+  .university-img {
+    width: 100% !important;
+  }
+  .room {
+    flex-wrap: wrap;
+  }
+  .room__img {
+    width: 100% !important;
+    height: 200px;
+  }
+  .room__info {
+    flex: 2;
+    gap: 10px;
+  }
+}
+@media (max-width: 575px) {
+  .university-details {
+    padding: 1em;
+    ul.details {
+      li {
+        width: 45%;
+        margin: 6px;
+        img {
+          width: 20px;
+          height: 20px;
+        }
+        span { font-size: 14px;margin: 0 5px; }
+      }
+    }
+    .actions {
+      ul {
+        width: 100%;
+      }
+      button {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+    }
+    .remaining-time {
+      margin-top: 0;
+    }
+  }
+  .university-information {
+    .information-tabs {
+      button.tablinks {
+        padding: 1em 0.5em;
+        font-size: 14px;
+        width: 30%;
+      }
+    }
+    .review {
+      flex-direction: column;
     }
   }
 }
