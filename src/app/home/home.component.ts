@@ -4,6 +4,8 @@ import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { Inquiry } from '../models/inquiry';
 import { InquiriesService } from '../services/inquiries.service';
 import { ToastrService } from 'ngx-toastr';
+import AOS from "aos";
+
 
 @Component({
   selector: 'app-home',
@@ -12,12 +14,34 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class HomeComponent implements OnInit {
   modalRef?: BsModalRef;
+  medicalUpTo = 0;
+  medicalStop = setInterval(() => {
+    this.medicalUpTo++
+    if (this.medicalUpTo == 20000) {
+      clearInterval(this.medicalStop)
+    }
+  }, -1000)
+  nationalStudentsUpTo = 0;
+  nationalStudentsStop = setInterval(() => {
+    this.nationalStudentsUpTo++
+    if (this.nationalStudentsUpTo == 10000) {
+      clearInterval(this.nationalStudentsStop)
+    }
+  }, -100)
+  turkishStudentsUpTo = 0;
+  turkishStudentsStop = setInterval(() => {
+    this.turkishStudentsUpTo++
+    if (this.turkishStudentsUpTo == 220000) {
+      clearInterval(this.turkishStudentsStop)
+    }
+  }, -10000)
 
   constructor(private modalService: BsModalService,
     private Inquiries: InquiriesService,
     private toastr: ToastrService) {}
 
   ngOnInit(): void {
+    AOS.init();
   }
 
   filterUniversity(university: string, event: any) {

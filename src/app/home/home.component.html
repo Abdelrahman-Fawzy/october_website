@@ -1,7 +1,7 @@
 <div class="welcoming">
   <div class="container">
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-6" data-aos="fade-left" data-aos-duration="2000">
         <div class="words">
           <h1>الوكيل المعتمد  <br>
             لأكثر من 45 جامعة في تركيا</h1>
@@ -10,7 +10,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6" data-aos="fade-right" data-aos-duration="2000">
         <div class="tree">
           <img src="assets/images/about/tree.png" alt="tree">
         </div>
@@ -24,7 +24,7 @@
 <div class="container">
   <div class="features">
     <div class="row">
-      <div class="col-lg-4 col-md-6">
+      <div class="col-lg-4 col-md-6" data-aos="flip-left" data-aos-duration="2000" data-aos-offset="500">
         <div class="feature box-shadow">
           <img src="assets/images/icons/home.png" alt="home">
           <span>الاقامة في تركيا</span>
@@ -35,7 +35,7 @@
           </a>
         </div>
       </div>
-      <div class="col-lg-4 col-md-6">
+      <div class="col-lg-4 col-md-6" data-aos="flip-up" data-aos-duration="2000" data-aos-offset="500">
         <div class="feature box-shadow">
           <img src="assets/images/icons/completed-task.png" alt="completed-task">
           <span>التقديم على الجامعات</span>
@@ -46,7 +46,7 @@
           </a>
         </div>
       </div>
-      <div class="col-lg-4 col-md-12">
+      <div class="col-lg-4 col-md-12" data-aos="flip-right" data-aos-duration="2000" data-aos-offset="500">
         <div class="feature box-shadow">
           <img src="assets/images/icons/conversation.png" alt="conversation">
           <span>استشارة مجانية</span>
@@ -62,40 +62,40 @@
 </div>
 <div class="information">
   <div class="row">
-    <div class="col-lg-6 col-md-12">
+    <div class="col-lg-6 col-md-12" data-aos="fade-left" data-aos-duration="3000" data-aos-offset="300">
       <div class="info">
         <h2>المنصة رقم 1 للدراسة في تركيا</h2>
         <p>بمرور الأعوام وزيادة الخبرة، أصبح فريقنا في أتم الاستعداد وعلى مدار الساعة لتوفير احتياجات طلابنا من كل أنحاء العالم للدراسة في تركيا</p>
         <button class="primary" (click)="register()">سجل الان</button>
       </div>
     </div>
-    <div class="col-lg-6 col-md-12 d-none d-lg-block">
+    <div class="col-lg-6 col-md-12 d-none d-lg-block" data-aos="fade-right" data-aos-duration="2000" data-aos-offset="500">
       <img src="assets/images/shapes/plane.png" alt="plane">
     </div>
   </div>
 </div>
 <div class="container">
-  <div class="statistics">
+  <div class="statistics" data-aos="fade-up" data-aos-duration="2000" data-aos-offset="500">
     <div class="row">
       <div class="col-lg-4 col-md-6 col-sm-12">
         <div class="stats">
           <img src="assets/images/icons/menu-arrow-circle.png" alt="menu arrow">
           <h6>عدد الاستشارات الطبية</h6>
-          <span>20,000+</span>
+          <span>{{medicalUpTo}}+</span>
         </div>
       </div>
       <div class="col-lg-4 col-md-6 col-sm-12">
         <div class="stats">
           <img src="assets/images/icons/graduation.png" alt="graduation">
           <h6>عدد الطلاب الدوليين</h6>
-          <span>10,000+</span>
+          <span id="national_students">{{nationalStudentsUpTo}}+</span>
         </div>
       </div>
       <div class="col-lg-4 col-md-12 col-sm-12">
         <div class="stats">
           <img src="assets/images/icons/college.png" alt="college">
           <h6>عدد الطلاب في تركيا</h6>
-          <span>220,000+</span>
+          <span id="turkish_students">{{turkishStudentsUpTo}}+</span>
         </div>
       </div>
     </div>
@@ -105,10 +105,10 @@
 <app-inquiries></app-inquiries>
 <div class="study_fans">
   <div class="row align-items-center">
-    <div class="col-lg-6 col-md-12 d-none d-lg-block">
+    <div class="col-lg-6 col-md-12 d-none d-lg-block" data-aos="fade-left" data-aos-duration="3000" data-aos-offset="500">
       <img class="shape" src="assets/images/shapes/books.png" alt="books">
     </div>
-    <div class="col-lg-6 col-md-12">
+    <div class="col-lg-6 col-md-12" data-aos="fade-right" data-aos-duration="3000" data-aos-offset="500">
       <div class="adventures">
         <h3>مميزات التقديم من خلال <span>StudyFans</span></h3>
         <ul class="list-unstyled">
@@ -127,11 +127,11 @@
 <div class="important_specializations">
   <div class="container">
     <div class="title">
-      <h2>اهم التخصصات</h2>
-      <a [routerLink]="'/study-majors'">عرض الجميع</a>
+      <h2 data-aos="fade-up" data-aos-duration="3000" data-aos-offset="500">اهم التخصصات</h2>
+      <a data-aos="fade-down" data-aos-duration="3000" data-aos-offset="500" [routerLink]="'/study-majors'">عرض الجميع</a>
     </div>
     <div class="row">
-      <div class="col-lg-4 col-md-6">
+      <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-duration="1500" data-aos-offset="500">
         <div class="specialization">
           <div class="specImg">
             <img src="assets/images/icons/doctor.png" alt="">
@@ -142,7 +142,7 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-4 col-md-6">
+      <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-duration="1500" data-aos-offset="500">
         <div class="specialization">
           <div class="specImg">
             <img src="assets/images/icons/healthcare.png" alt="">
@@ -153,7 +153,7 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-4 col-md-6">
+      <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-duration="1500" data-aos-offset="500">
         <div class="specialization">
           <div class="specImg">
             <img src="assets/images/icons/teeth.png" alt="">
@@ -164,7 +164,7 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-4 col-md-6">
+      <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-duration="1500" data-aos-offset="500">
         <div class="specialization">
           <div class="specImg">
             <img src="assets/images/icons/manager.png" alt="">
@@ -175,7 +175,7 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-4 col-md-6">
+      <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-duration="1500" data-aos-offset="500">
         <div class="specialization">
           <div class="specImg">
             <img src="assets/images/icons/coding.png" alt="">
@@ -186,7 +186,7 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-4 col-md-6">
+      <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-duration="1500" data-aos-offset="500">
         <div class="specialization">
           <div class="specImg">
             <img src="assets/images/icons/monitor.png" alt="">
@@ -197,7 +197,7 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-4 col-md-6">
+      <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-duration="1500" data-aos-offset="500">
         <div class="specialization">
           <div class="specImg">
             <img src="assets/images/icons/architect.png" alt="">
@@ -208,7 +208,7 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-4 col-md-6">
+      <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-duration="1500" data-aos-offset="500">
         <div class="specialization">
           <div class="specImg">
             <img src="assets/images/icons/mechanic.png" alt="">
@@ -219,7 +219,7 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-4 col-md-6">
+      <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-duration="1500" data-aos-offset="500">
         <div class="specialization">
           <div class="specImg">
             <img src="assets/images/icons/robotic-arm.png" alt="">
@@ -230,7 +230,7 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-4 col-md-6">
+      <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-duration="1500" data-aos-offset="500">
         <div class="specialization">
           <div class="specImg">
             <img src="assets/images/icons/engineer.png" alt="">
@@ -241,7 +241,7 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-4 col-md-6">
+      <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-duration="1500" data-aos-offset="500">
         <div class="specialization">
           <div class="specImg">
             <img src="assets/images/icons/digital-marketing.png" alt="">
@@ -252,7 +252,7 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-4 col-md-6">
+      <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-duration="1500" data-aos-offset="500">
         <div class="specialization">
           <div class="specImg">
             <img src="assets/images/icons/social-media.png" alt="">
@@ -269,7 +269,7 @@
     </button>
   </div>
 </div>
-<div class="best_universities">
+<div class="best_universities" data-aos="fade-up" data-aos-duration="2000" data-aos-offset="500">
   <h2 class="title">افضل الجامعات التركية</h2>
   <div class="filteration-buttons">
     <button class="filterBtn active" (click)="filterUniversity('all', $event)">فلتر لنتائج الجامعات</button>
@@ -493,7 +493,7 @@
       <h2>احدث المقالات</h2>
     </div>
     <div class="row">
-      <div class="col-lg-7 mb-4">
+      <div class="col-lg-7 mb-4" data-aos="fade-left" data-aos-duration="2000" data-aos-offset="500">
         <div class="card">
           <img src="assets/images/articles/article.png" class="card-img-top" alt="article">
           <div class="card-body">
@@ -526,7 +526,7 @@
         </div>
         <button class="primary">عرض كل المقالات</button>
       </div>
-      <div class="col-lg-5">
+      <div class="col-lg-5" data-aos="fade-right" data-aos-duration="2000" data-aos-offset="500">
         <div class="another_articles">
           <div class="title">مقالات اخري</div>
           <div class="article">
